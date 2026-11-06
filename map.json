@@ -1,0 +1,392 @@
+{
+ "prem-singh-tamang": {
+  "name": "Prem Singh Tamang",
+  "role": "Chief Minister of Sikkim",
+  "title": "Prem Singh Tamang",
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/7/72/Prem_Singh_Tamang%2C_Chief_Minister_of_Sikkim.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+ },
+ "pushkar-singh-dhami": {
+  "name": "Pushkar Singh Dhami",
+  "role": "Chief Minister of Uttarakhand",
+  "title": "Pushkar Singh Dhami",
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/9/95/Pushkar_Singh_Dhami%2C_Chief_Minister_of_Uttarakhand.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+ },
+ "d-k-shivakumar": {
+  "name": "D. K. Shivakumar",
+  "role": "Chief Minister of Karnataka",
+  "title": "D. K. Shivakumar",
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/DK_Shivakumar.png/960px-DK_Shivakumar.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+ },
+ "mohan-charan-majhi": {
+  "name": "Mohan Charan Majhi",
+  "role": "Chief Minister of Odisha",
+  "title": "Mohan Charan Majhi",
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/4/42/Shri_Mohan_Charan_Majhi.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+ },
+ "c-joseph-vijay": {
+  "name": "C. Joseph Vijay",
+  "role": "Chief Minister of Tamil Nadu",
+  "title": "C. Joseph Vijay",
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/d/d8/JosephVijay.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+ },
+ "v-d-satheesan": {
+  "name": "V. D. Satheesan",
+  "role": "Chief Minister of Keralam",
+  "title": "V. D. Satheesan",
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/6/65/VD_Satheesan.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+ },
+ "suvendu-adhikari": {
+  "name": "Suvendu Adhikari",
+  "role": "Chief Minister of West Bengal",
+  "title": "Suvendu Adhikari",
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/2/24/Suvendu_Adhikari_May_2026_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+ },
+ "himanta-biswa-sarma": {
+  "name": "Himanta Biswa Sarma",
+  "role": "Chief Minister of Assam",
+  "title": "Himanta Biswa Sarma",
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Himanta_Biswa_Sarma_in_2026.jpg/960px-Himanta_Biswa_Sarma_in_2026.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+ },
+ "pramod-sawant": {
+  "name": "Pramod Sawant",
+  "role": "Chief Minister of Goa",
+  "title": "Pramod Sawant",
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/Pramod_Sawant_at_the_inauguration_of_the_Chhatrapati_Shivaji_Maharaj_Chair_in_Goa_University_%28cropped%29.jpg/960px-Pramod_Sawant_at_the_inauguration_of_the_Chhatrapati_Shivaji_Maharaj_Chair_in_Goa_University_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+ },
+ "nayab-singh-saini": {
+  "name": "Nayab Singh Saini",
+  "role": "Chief Minister of Haryana",
+  "title": "Nayab Singh Saini",
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/b/b7/Nayab_Singh_Saini_October_2024.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+ },
+ "samrat-choudhary": {
+  "name": "Samrat Choudhary",
+  "role": "Chief Minister of Bihar",
+  "title": "Samrat Choudhary",
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8e/Samrat_Chaudhary_in_Rajgir.jpg/960px-Samrat_Chaudhary_in_Rajgir.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+ },
+ "vishnu-deo-sai": {
+  "name": "Vishnu Deo Sai",
+  "role": "Chief Minister of Chhattisgarh",
+  "title": "Vishnu Deo Sai",
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Vishnu_Deo_Sai%2C_Chief_Minister_of_Chhattisgarh.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+ },
+ "n-chandrababu-naidu": {
+  "name": "N. Chandrababu Naidu",
+  "role": "Chief Minister of Andhra Pradesh",
+  "title": "N. Chandrababu Naidu",
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/a/a8/The_portrait_of_CM_Shri_Nara_Chandrababu_Naidu.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+ },
+ "bhupendra-patel": {
+  "name": "Bhupendra Patel",
+  "role": "Chief Minister of Gujarat",
+  "title": "Bhupendrabhai Patel",
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Bhupendra_Patel_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+ },
+ "pema-khandu": {
+  "name": "Pema Khandu",
+  "role": "Chief Minister of Arunachal Pradesh",
+  "title": "Pema Khandu",
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Pema_Khandu_in_2018.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+ },
+ "sukhvinder-singh-sukhu": {
+  "name": "Sukhvinder Singh Sukhu",
+  "role": "Chief Minister of Himachal Pradesh",
+  "title": "Sukhvinder Singh Sukhu",
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/b/b0/Sukhvinder_Singh_Sukhu.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+ },
+ "hemant-soren": {
+  "name": "Hemant Soren",
+  "role": "Chief Minister of Jharkhand",
+  "title": "Hemant Soren",
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/6/69/Hemant_Soren_2024.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+ },
+ "mohan-yadav": {
+  "name": "Mohan Yadav",
+  "role": "Chief Minister of Madhya Pradesh",
+  "title": "Mohan Yadav",
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/5/58/Mohan_Yadav%2C_Chief_Minister_of_Madhya_Pradesh.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+ },
+ "devendra-fadnavis": {
+  "name": "Devendra Fadnavis",
+  "role": "Chief Minister of Maharashtra",
+  "title": "Devendra Fadnavis",
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/b/be/Shri_Devendra_Gangadharrao_Fadnavis.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+ },
+ "conrad-k-sangma": {
+  "name": "Conrad K. Sangma",
+  "role": "Chief Minister of Meghalaya",
+  "title": "Conrad Sangma",
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/0/04/Conrad_Sangma_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+ },
+ "yumnam-khemchand-singh": {
+  "name": "Yumnam Khemchand Singh",
+  "role": "Chief Minister of Manipur",
+  "title": "Yumnam Khemchand Singh",
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/f/fc/YumnamKhemchandSingh_%28cropped%29.webp?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+ },
+ "lalduhoma": {
+  "name": "Lalduhoma",
+  "role": "Chief Minister of Mizoram",
+  "title": "Lalduhoma",
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Lalduhoma.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+ },
+ "neiphiu-rio": {
+  "name": "Neiphiu Rio",
+  "role": "Chief Minister of Nagaland",
+  "title": "Neiphiu Rio",
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Neiphiu_Rio.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+ },
+ "bhagwant-singh-mann": {
+  "name": "Bhagwant Singh Mann",
+  "role": "Chief Minister of Punjab",
+  "title": "Bhagwant Mann",
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Bhagwant_Mann_2026.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+ },
+ "bhajan-lal-sharma": {
+  "name": "Bhajan Lal Sharma",
+  "role": "Chief Minister of Rajasthan",
+  "title": "Bhajan Lal Sharma",
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Bhajan_Lal_Sharma_and_deputies_meets_VP_of_India.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+ },
+ "revanth-reddy": {
+  "name": "Revanth Reddy",
+  "role": "Chief Minister of Telangana",
+  "title": "Revanth Reddy",
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/Telangana_CM_Revanth_Reddy_at_Gaddar_Awards_2025_-_1.jpg/960px-Telangana_CM_Revanth_Reddy_at_Gaddar_Awards_2025_-_1.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+ },
+ "manik-saha": {
+  "name": "Manik Saha",
+  "role": "Chief Minister of Tripura",
+  "title": "Manik Saha",
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Dr._Manik_Saha.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+ },
+ "yogi-adityanath": {
+  "name": "Yogi Adityanath",
+  "role": "Chief Minister of Uttar Pradesh",
+  "title": "Yogi Adityanath",
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/0/05/Yogi_Adityanath_2026.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+ },
+ "dushyant-gautam": {
+  "name": "Dushyant Gautam",
+  "role": "Governor of Sikkim",
+  "title": "Dushyant Kumar Gautam",
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/86/Dushyant_kumar_gautam_02.jpg/960px-Dushyant_kumar_gautam_02.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+ },
+ "dhal-singh-bisen": {
+  "name": "Dr. Dhal Singh Bisen",
+  "role": "Governor of Uttarakhand",
+  "title": "Dhal Singh Bisen",
+  "thumb": "https://upload.wikimedia.org/wikipedia/en/4/4e/Dhal_Singh_Bisen.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+ },
+ "sudha-yadav": {
+  "name": "Dr. Sudha Yadav",
+  "role": "Governor of Karnataka",
+  "title": "Sudha Yadav (politician)",
+  "thumb": null
+ },
+ "brijmohan-ram": {
+  "name": "Brijmohan Ram",
+  "role": "Governor of Odisha",
+  "title": "Brijmohan Ram",
+  "thumb": null
+ },
+ "rajendra-arlekar": {
+  "name": "Rajendra Arlekar",
+  "role": "Governor of Tamil Nadu",
+  "title": "Rajendra Arlekar",
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/1/16/Rajendra_Arlekar%2C_Governor_of_Kerala.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+ },
+ "om-prakash-mathur": {
+  "name": "Om Prakash Mathur",
+  "role": "Governor of Keralam",
+  "title": "Om Prakash Mathur",
+  "thumb": "https://upload.wikimedia.org/wikipedia/en/e/ed/Governor_Kerala_Om_Mathur.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+ },
+ "r-n-ravi": {
+  "name": "R. N. Ravi",
+  "role": "Governor of West Bengal",
+  "title": "R. N. Ravi",
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/b/b1/The_Governor_of_Nagaland%2C_Shri_R.N._Ravi.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+ },
+ "lakshman-prasad-acharya": {
+  "name": "Lakshman Prasad Acharya",
+  "role": "Governor of Assam",
+  "title": "Lakshman Prasad Acharya",
+  "thumb": null
+ },
+ "pusapati-ashok-gajapathi-raju": {
+  "name": "Pusapati Ashok Gajapathi Raju",
+  "role": "Governor of Goa",
+  "title": "Ashok Gajapathi Raju",
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/1/12/The_Union_Minister_for_Civil_Aviation%2C_Shri_Ashok_Gajapathi_Raju_Pusapati%2C_in_New_Delhi_on_July_27%2C_2016_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+ },
+ "ashim-kumar-ghosh": {
+  "name": "Prof. Ashim Kumar Ghosh",
+  "role": "Governor of Haryana",
+  "title": "Ashim Kumar Ghosh",
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Ashim_Kumar_Ghosh.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+ },
+ "syed-ata-hasnain": {
+  "name": "Syed Ata Hasnain",
+  "role": "Governor of Bihar",
+  "title": "Syed Ata Hasnain",
+  "thumb": "https://upload.wikimedia.org/wikipedia/en/9/92/HE_Syed_Ata_Hasnain.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+ },
+ "ramen-deka": {
+  "name": "Ramen Deka",
+  "role": "Governor of Chhattisgarh",
+  "title": "Ramen Deka",
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/80/Ramen_Deka_with_President_Murmu_%28cropped%29.jpg/960px-Ramen_Deka_with_President_Murmu_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+ },
+ "s-abdul-nazeer": {
+  "name": "Justice (Retd.) S. Abdul Nazeer",
+  "role": "Governor of Andhra Pradesh",
+  "title": "Syed Abdul Nazeer",
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/5/52/Justice_Syed_Abdul_Nazeer.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+ },
+ "acharya-devvrat": {
+  "name": "Acharya Devvrat",
+  "role": "Governor of Gujarat",
+  "title": "Acharya Devvrat",
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Acharya_Devvrat.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+ },
+ "k-t-parnaik": {
+  "name": "Lt Gen (Retd.) K. T. Parnaik",
+  "role": "Governor of Arunachal Pradesh",
+  "title": "K. T. Parnaik",
+  "thumb": null
+ },
+ "kavinder-gupta": {
+  "name": "Kavinder Gupta",
+  "role": "Governor of Himachal Pradesh",
+  "title": "Kavinder Gupta",
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Kavinder_Gupta_2025_portrait.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+ },
+ "santosh-kumar-gangwar": {
+  "name": "Santosh Kumar Gangwar",
+  "role": "Governor of Jharkhand",
+  "title": "Santosh Gangwar",
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/7/73/Santosh_Kumar_Gangwar_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+ },
+ "mangubhai-chhaganbhai-patel": {
+  "name": "Mangubhai Chhaganbhai Patel",
+  "role": "Governor of Madhya Pradesh",
+  "title": "Mangubhai C. Patel",
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Mangubhai_Patel_MP_Governor_%28cropped%29_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+ },
+ "vishnu-dev-verma": {
+  "name": "Vishnu Dev Verma",
+  "role": "Governor of Maharashtra",
+  "title": "Vishnu Dev Verma",
+  "thumb": null
+ },
+ "c-h-vijayashankar": {
+  "name": "C. H. Vijayashankar",
+  "role": "Governor of Meghalaya",
+  "title": "C. H. Vijayashankar",
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/9/9c/C_H_Vijayashankar.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+ },
+ "ajay-kumar-bhalla": {
+  "name": "Ajay Kumar Bhalla",
+  "role": "Governor of Manipur",
+  "title": "Ajay Kumar Bhalla",
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/b/b1/The_Secretary%2C_Ministry_of_Power%2C_Shri_Ajay_Kumar_Bhalla_in_New_Delhi_on_May_31%2C_2019_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+ },
+ "v-k-singh": {
+  "name": "V. K. Singh",
+  "role": "Governor of Mizoram",
+  "title": "V. K. Singh",
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c2/India%27s_Minister_of_State_for_External_Affairs_Vijay_Kumar_Singh_%2815760995677%29_%28cropped%29.jpg/960px-India%27s_Minister_of_State_for_External_Affairs_Vijay_Kumar_Singh_%2815760995677%29_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+ },
+ "nand-kishore-yadav": {
+  "name": "Nand Kishore Yadav",
+  "role": "Governor of Nagaland",
+  "title": "Nand Kishore Yadav",
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/3/3d/Nand_kishore_yadav.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+ },
+ "gulab-chand-kataria": {
+  "name": "Gulab Chand Kataria",
+  "role": "Governor of Punjab and Administrator of Chandigarh",
+  "title": "Gulab Chand Kataria",
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/a/ac/GC_Kataria.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+ },
+ "hari-bhau-kisanrao-bagde": {
+  "name": "Hari Bhau Kisanrao Bagde",
+  "role": "Governor of Rajasthan",
+  "title": "Haribhau Bagade",
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Haribhau_Bagade_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+ },
+ "shiv-pratap-shukla": {
+  "name": "Shiv Pratap Shukla",
+  "role": "Governor of Telangana",
+  "title": "Shiv Pratap Shukla",
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Shivpratap_Shukla.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+ },
+ "indrasena-reddy": {
+  "name": "Indrasena Reddy",
+  "role": "Governor of Tripura",
+  "title": "N. Indrasena Reddy",
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/7/75/Indrasena_Reddy.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+ },
+ "anandiben-patel": {
+  "name": "Anandiben Patel",
+  "role": "Governor of Uttar Pradesh",
+  "title": "Anandiben Patel",
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Anandiben.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+ },
+ "v-k-saxena": {
+  "name": "V. K. (Vinay Kumar) Saxena",
+  "role": "Lieutenant Governor of Ladakh",
+  "title": "Vinai Kumar Saxena",
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Vinai_Kumar_Saxena%2C_who_is_serving_as_the_22nd_Lieutenant_Governor_of_Delhi%2C_photographed_on_June_24%2C_2022.jpg/960px-Vinai_Kumar_Saxena%2C_who_is_serving_as_the_22nd_Lieutenant_Governor_of_Delhi%2C_photographed_on_June_24%2C_2022.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+ },
+ "k-kailashnathan": {
+  "name": "K. Kailashnathan",
+  "role": "Lieutenant Governor of Puducherry",
+  "title": "K. Kailashnathan",
+  "thumb": null
+ },
+ "manoj-sinha": {
+  "name": "Manoj Sinha",
+  "role": "Lieutenant Governor of Jammu and Kashmir",
+  "title": "Manoj Sinha",
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/Manoj_Sinha_Lt._Governor.jpg/960px-Manoj_Sinha_Lt._Governor.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+ },
+ "taranjit-singh-sandhu": {
+  "name": "Taranjit Singh Sandhu",
+  "role": "Lieutenant Governor of Delhi",
+  "title": "Taranjit Singh Sandhu",
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/India_Artemis_Accords_Signing_%28NHQ202306210057%2C_cropped%29.jpg/960px-India_Artemis_Accords_Signing_%28NHQ202306210057%2C_cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+ },
+ "dinesh-sharma": {
+  "name": "Dinesh Sharma",
+  "role": "Lieutenant Governor of Andaman and Nicobar Islands",
+  "title": "Dinesh Sharma (politician)",
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Shri_Dinesh_Sharma_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+ },
+ "praful-patel": {
+  "name": "Praful Patel",
+  "role": "Administrator of Dadra and Nagar Haveli and Daman and Diu, and Lakshadweep",
+  "title": "Praful Patel",
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b3/Praful_Patel_addressing_at_the_presentation_ceremony_of_the_MoU_Excellence_Awards_%26_SCOPE_Excellence_Awards_for_the_year_2009-10%2C_in_New_Delhi_on_January_31%2C_2012.jpg/960px-thumbnail.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+ },
+ "n-rangasamy": {
+  "name": "N. Rangasamy",
+  "role": "Chief Minister of Puducherry",
+  "title": "N. Rangaswamy",
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/e/ee/N._Rangaswamy_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+ },
+ "omar-abdullah": {
+  "name": "Omar Abdullah",
+  "role": "Chief Minister of Jammu and Kashmir",
+  "title": "Omar Abdullah",
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/6/68/Omar_Abdullah%2C_Chief_Minister_of_Jammu_%26_Kashmir.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+ },
+ "rekha-gupta": {
+  "name": "Rekha Gupta",
+  "role": "Chief Minister of Delhi",
+  "title": "Rekha Gupta",
+  "thumb": "https://upload.wikimedia.org/wikipedia/commons/7/72/Chief_Minister_of_Delhi%2C_Smt._Rekha_Gupta.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+ }
+}

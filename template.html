@@ -1,0 +1,2141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0A0F1C">
+<meta name="description" content="Mobile study page for all 28 States and 8 Union Territories of India: Chief Ministers, Governors, capitals and legislature seats, with a 25-question test.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Governors &amp; Chief Ministers of India 2026">
+<meta property="og:description" content="Updated list of all 28 States and 8 Union Territories with Chief Ministers, Governors, capitals and seat counts. Includes a 25-question test.">
+<title>Governors &amp; Chief Ministers of India 2026</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230A0F1C'/%3E%3Ccircle cx='32' cy='24' r='10' fill='%236EA8FF'/%3E%3Crect x='13' y='39' width='38' height='6' rx='3' fill='%23F4F6FA'/%3E%3Crect x='13' y='49' width='25' height='6' rx='3' fill='%23B6C0D0'/%3E%3C/svg%3E">
+<style>
+:root{
+  --bg:#0A0F1C;
+  --shape-1:#1B3A6B;
+  --shape-2:#3A2E6B;
+  --shape-3:#0F5257;
+  --glass:rgba(255,255,255,0.08);
+  --glass-strong:rgba(255,255,255,0.14);
+  --glass-border:rgba(255,255,255,0.20);
+  --text:#F4F6FA;
+  --text-2:#B6C0D0;
+  --text-3:#8592A6;
+  --accent:#6EA8FF;
+  --highlight-bg:rgba(245,200,76,0.20);
+  --highlight-text:#FFE9A8;
+  --highlight-border:rgba(245,200,76,0.45);
+  --success:#34C98B;
+  --danger:#F0616D;
+  --new-bg:rgba(110,168,255,0.20);
+  --new-text:#A9CBFF;
+  --r-card:28px;
+  --r-tile:20px;
+  --ease:cubic-bezier(0.22,1,0.36,1);
+  --topbar:52px;
+  --page-pad:16px;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+
+html{
+  color-scheme:dark;
+  scroll-behavior:smooth;
+  scroll-snap-type:y proximity;
+  -webkit-text-size-adjust:100%;
+  text-size-adjust:100%;
+}
+
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  font-size:15px;
+  line-height:1.5;
+  font-variant-numeric:tabular-nums;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+
+h1,h2,h3,p,figure{margin:0}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+a{color:var(--accent);text-decoration:none}
+img{display:block;max-width:100%}
+ul{margin:0;padding:0;list-style:none}
+
+:focus-visible{
+  outline:2px solid var(--accent);
+  outline-offset:3px;
+  border-radius:10px;
+}
+
+/* ---------- background spatial layer ---------- */
+.bg-layer{
+  position:fixed;
+  inset:0;
+  z-index:0;
+  overflow:hidden;
+  pointer-events:none;
+}
+.shape{
+  position:absolute;
+  opacity:0.55;
+  will-change:transform;
+}
+.shape-1{width:260px;height:260px;border-radius:50%;background:var(--shape-1);top:-70px;left:-80px}
+.shape-2{width:300px;height:300px;border-radius:50%;background:var(--shape-2);top:34%;right:-130px}
+.shape-3{width:210px;height:210px;border-radius:56px;background:var(--shape-3);bottom:14%;left:-70px}
+.shape-4{width:520px;height:520px;border-radius:50%;background:var(--shape-1);bottom:-240px;right:-210px}
+
+/* ---------- top bar ---------- */
+.topbar{
+  position:fixed;
+  top:0;left:0;right:0;
+  z-index:60;
+  height:calc(var(--topbar) + env(safe-area-inset-top));
+  padding-top:env(safe-area-inset-top);
+  background:var(--glass);
+  -webkit-backdrop-filter:blur(18px) saturate(140%);
+  backdrop-filter:blur(18px) saturate(140%);
+  border-bottom:1px solid var(--glass-border);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,0.20);
+}
+.topbar-inner{
+  height:var(--topbar);
+  max-width:480px;
+  margin:0 auto;
+  padding:0 var(--page-pad);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+}
+.tb-left{
+  display:flex;
+  align-items:baseline;
+  gap:8px;
+  min-width:0;
+  font-size:13px;
+  font-weight:600;
+  letter-spacing:0.01em;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+.tb-section{color:var(--text);overflow:hidden;text-overflow:ellipsis}
+.tb-count{color:var(--text-3);font-size:12px;font-weight:600;letter-spacing:0.04em}
+.tb-btn{
+  flex:0 0 auto;
+  min-height:44px;
+  min-width:64px;
+  padding:0 12px;
+  border-radius:14px;
+  border:1px solid var(--glass-border);
+  background:var(--glass-strong);
+  color:var(--text);
+  font-size:13px;
+  font-weight:600;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:6px;
+}
+.tb-btn svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:1.75;stroke-linecap:round}
+.progress-line{
+  position:absolute;
+  left:0;right:0;bottom:0;
+  height:3px;
+  background:rgba(255,255,255,0.08);
+}
+.progress-fill{
+  height:100%;
+  width:0%;
+  background:var(--accent);
+  transform-origin:0 50%;
+}
+
+/* ---------- layout ---------- */
+.wrap{
+  width:100%;
+  max-width:480px;
+  margin:0 auto;
+  padding:0 var(--page-pad);
+}
+main{position:relative;z-index:1}
+
+.scene{
+  min-height:100svh;
+  display:flex;
+  align-items:center;
+  padding:calc(var(--topbar) + env(safe-area-inset-top) + 16px) 0 calc(96px + env(safe-area-inset-bottom));
+  scroll-snap-align:start;
+  transition:opacity .5s var(--ease),transform .6s var(--ease);
+}
+.scene.dim{opacity:0.45;transform:scale(0.95)}
+.scene-inner{
+  width:100%;
+  max-width:480px;
+  margin:0 auto;
+  padding:0 var(--page-pad);
+  perspective:1200px;
+  transform-style:preserve-3d;
+}
+
+/* ---------- glass ---------- */
+.glass{
+  background:var(--glass);
+  -webkit-backdrop-filter:blur(18px) saturate(140%);
+  backdrop-filter:blur(18px) saturate(140%);
+  border:1px solid var(--glass-border);
+  border-radius:var(--r-card);
+  box-shadow:0 12px 40px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.28);
+}
+.card{
+  padding:20px;
+  transform-style:preserve-3d;
+  transition:transform .45s var(--ease);
+}
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
+  .glass,.topbar,.dock,.sheet{
+    background:rgba(24,32,50,0.94);
+    -webkit-backdrop-filter:none;
+    backdrop-filter:none;
+  }
+}
+
+/* ---------- reusable text ---------- */
+.label{
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:0.08em;
+  font-weight:600;
+  color:var(--text-3);
+}
+.chip{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  padding:5px 11px;
+  border-radius:999px;
+  border:1px solid var(--glass-border);
+  background:var(--glass-strong);
+  font-size:12px;
+  font-weight:600;
+  color:var(--text-2);
+  white-space:nowrap;
+}
+.new-chip{
+  display:inline-flex;
+  align-items:center;
+  padding:2px 7px;
+  border-radius:999px;
+  background:var(--new-bg);
+  color:var(--new-text);
+  border:1px solid rgba(110,168,255,0.35);
+  font-size:10px;
+  font-weight:700;
+  letter-spacing:0.08em;
+  vertical-align:middle;
+}
+.note-chip{
+  display:inline-block;
+  padding:5px 11px;
+  border-radius:12px;
+  background:rgba(255,255,255,0.06);
+  border:1px solid rgba(255,255,255,0.12);
+  font-size:12px;
+  line-height:1.4;
+  color:var(--text-2);
+  text-wrap:pretty;
+}
+
+/* ---------- hero ---------- */
+.hero-inner{
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+  align-items:flex-start;
+}
+.hero-title{
+  font-size:clamp(32px,9vw,44px);
+  font-weight:800;
+  letter-spacing:-0.02em;
+  line-height:1.1;
+  text-wrap:balance;
+}
+.hero-sub{
+  font-size:16px;
+  color:var(--text-2);
+  text-wrap:pretty;
+}
+.hero-source{
+  font-size:12px;
+  color:var(--text-3);
+  line-height:1.5;
+  text-wrap:pretty;
+}
+.chip-row{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-top:4px;
+}
+.chip-float{
+  animation:heroFloat 7s ease-in-out infinite alternate;
+  animation-play-state:paused;
+}
+body.ready .chip-float{animation-play-state:running}
+.chip-float:nth-child(2){animation-duration:8s;animation-delay:-1.2s}
+.chip-float:nth-child(3){animation-duration:6.5s;animation-delay:-2.4s}
+.chip-float:nth-child(4){animation-duration:7.5s;animation-delay:-3.6s}
+@keyframes heroFloat{
+  from{transform:translateY(0)}
+  to{transform:translateY(-6px)}
+}
+.hero-actions{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  width:100%;
+  margin-top:8px;
+}
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  min-height:48px;
+  padding:0 20px;
+  border-radius:16px;
+  border:1px solid var(--glass-border);
+  background:var(--glass-strong);
+  color:var(--text);
+  font-size:15px;
+  font-weight:600;
+  transition:transform .2s var(--ease),background .2s linear;
+}
+.btn:active{transform:scale(0.985)}
+.btn-primary{
+  background:var(--accent);
+  border-color:var(--accent);
+  color:#06101F;
+}
+.btn svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round}
+.scroll-cue{
+  display:flex;
+  justify-content:center;
+  width:100%;
+  padding-top:8px;
+  color:var(--text-3);
+}
+.scroll-cue svg{
+  width:22px;height:22px;
+  stroke:currentColor;fill:none;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round;
+  animation:cue 2.2s ease-in-out infinite;
+}
+@keyframes cue{
+  0%,100%{transform:translateY(0);opacity:.55}
+  50%{transform:translateY(5px);opacity:1}
+}
+
+/* ---------- section headers ---------- */
+.section-intro{
+  padding:calc(var(--topbar) + env(safe-area-inset-top) + 24px) 0 20px;
+}
+.section-title{
+  font-size:27px;
+  font-weight:700;
+  letter-spacing:-0.01em;
+  text-wrap:balance;
+}
+.section-sub{
+  margin-top:8px;
+  font-size:15px;
+  color:var(--text-2);
+  text-wrap:pretty;
+}
+.section-block{
+  padding:24px 0 8px;
+}
+
+/* ---------- state card ---------- */
+.card-head{
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+  margin-bottom:16px;
+}
+.head-top{
+  display:flex;
+  align-items:baseline;
+  gap:10px;
+}
+.badge-num{
+  font-size:30px;
+  font-weight:800;
+  letter-spacing:-0.02em;
+  line-height:1;
+  color:var(--text);
+  font-variant-numeric:tabular-nums;
+}
+.badge-of{
+  font-size:12px;
+  font-weight:600;
+  color:var(--text-3);
+  letter-spacing:0.04em;
+}
+.chip-line{
+  display:flex;
+  flex-wrap:wrap;
+  gap:6px;
+  margin-top:2px;
+}
+.place-name{
+  font-size:28px;
+  font-weight:700;
+  letter-spacing:-0.015em;
+  line-height:1.15;
+  text-wrap:balance;
+}
+.capital-block{
+  display:flex;
+  flex-direction:column;
+  gap:4px;
+  margin-bottom:16px;
+}
+.capital-value{
+  font-size:16px;
+  font-weight:600;
+  color:var(--text);
+  text-wrap:pretty;
+}
+.capital-note{
+  font-size:13px;
+  color:var(--text-3);
+}
+
+/* person tiles */
+.person-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+  margin-bottom:16px;
+}
+.person-grid.single{
+  grid-template-columns:1fr;
+}
+.person-grid.single .person-tile{
+  max-width:280px;
+  margin:0 auto;
+  width:100%;
+}
+.person-tile{
+  background:var(--glass-strong);
+  border:1px solid var(--glass-border);
+  border-radius:var(--r-tile);
+  padding:14px 8px;
+  min-height:206px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+  transform:translateZ(12px);
+  transform-style:preserve-3d;
+}
+.person-inner{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:8px;
+  width:100%;
+}
+.photo-wrap{
+  width:88px;
+  height:88px;
+  border-radius:50%;
+  overflow:hidden;
+  flex:0 0 auto;
+  background:var(--glass-strong);
+  border:1px solid rgba(255,255,255,0.24);
+  box-shadow:0 8px 22px rgba(0,0,0,0.45);
+  transform:translateZ(24px);
+}
+.photo-wrap img,
+.photo-fallback{
+  width:88px;
+  height:88px;
+  object-fit:cover;
+  object-position:center top;
+  border-radius:50%;
+}
+.photo-fallback{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:26px;
+  font-weight:600;
+  color:#FFFFFF;
+  letter-spacing:0.02em;
+}
+.person-tile .role{
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:0.08em;
+  font-weight:600;
+  color:var(--text-3);
+  line-height:1.3;
+  min-height:2.6em;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+.name-chip{
+  display:inline;
+  padding:3px 6px;
+  border-radius:9px;
+  background:var(--highlight-bg);
+  border:1px solid var(--highlight-border);
+  color:var(--highlight-text);
+  font-size:clamp(12.8px,3.55vw,15px);
+  font-weight:600;
+  line-height:1.35;
+  overflow-wrap:break-word;
+  word-break:break-word;
+  box-decoration-break:clone;
+  -webkit-box-decoration-break:clone;
+}
+.name-line{
+  display:flex;
+  flex-wrap:wrap;
+  gap:5px;
+  align-items:center;
+  justify-content:center;
+  max-width:100%;
+}
+.party{
+  font-size:12.5px;
+  color:var(--text-2);
+  line-height:1.4;
+  text-wrap:pretty;
+}
+.person-note{
+  font-size:11.5px;
+  color:var(--text-3);
+  line-height:1.4;
+  text-wrap:pretty;
+}
+
+/* stat tiles */
+.stat-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px;
+}
+.stat{
+  background:var(--glass-strong);
+  border:1px solid var(--glass-border);
+  border-radius:var(--r-tile);
+  padding:14px 6px;
+  min-height:86px;
+  display:flex;
+  align-items:flex-start;
+  justify-content:center;
+  transform:translateZ(12px);
+}
+.stat-inner{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:4px;
+  width:100%;
+}
+.stat-num{
+  font-size:28px;
+  font-weight:700;
+  line-height:1.1;
+  letter-spacing:-0.02em;
+  font-variant-numeric:tabular-nums;
+}
+.stat-label{
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:0.08em;
+  font-weight:600;
+  color:var(--text-3);
+  text-align:center;
+  line-height:1.25;
+}
+.stat-caption{
+  font-size:10px;
+  line-height:1.3;
+  color:var(--text-3);
+  text-align:center;
+  text-wrap:balance;
+  margin-top:2px;
+}
+.vp-row{
+  display:flex;
+  align-items:baseline;
+  justify-content:space-between;
+  gap:12px;
+  margin-top:12px;
+  padding:12px 14px;
+  background:var(--glass-strong);
+  border:1px solid var(--glass-border);
+  border-radius:var(--r-tile);
+}
+.vp-label{
+  font-size:13.5px;
+  color:var(--text-2);
+  line-height:1.35;
+  text-wrap:pretty;
+}
+.vp-num{
+  font-size:20px;
+  font-weight:700;
+  font-variant-numeric:tabular-nums;
+  flex:0 0 auto;
+}
+
+/* territory closing note */
+.closing-note{
+  margin:8px auto 0;
+  max-width:480px;
+  padding:0 var(--page-pad);
+}
+.closing-note .glass{
+  padding:18px 20px;
+  font-size:14.5px;
+  color:var(--text-2);
+  line-height:1.55;
+  text-wrap:pretty;
+}
+
+/* ---------- bicameral ---------- */
+.leg-row{
+  padding:16px 18px;
+  margin-bottom:12px;
+}
+.leg-top{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin-bottom:8px;
+}
+.leg-num{
+  width:26px;height:26px;
+  flex:0 0 auto;
+  border-radius:9px;
+  background:var(--glass-strong);
+  border:1px solid var(--glass-border);
+  display:flex;align-items:center;justify-content:center;
+  font-size:12px;font-weight:700;
+}
+.leg-name{
+  font-size:17px;
+  font-weight:700;
+  letter-spacing:-0.01em;
+}
+.leg-line{
+  font-size:13.5px;
+  color:var(--text-2);
+  line-height:1.45;
+  padding-left:0;
+}
+.leg-line strong{
+  color:var(--text-3);
+  font-weight:600;
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:0.08em;
+  margin-right:6px;
+}
+.leg-seats{
+  margin-top:10px;
+  display:inline-flex;
+  align-self:flex-start;
+  font-size:12.5px;
+  font-weight:600;
+  color:var(--new-text);
+  background:var(--new-bg);
+  border:1px solid rgba(110,168,255,0.35);
+  border-radius:999px;
+  padding:4px 10px;
+}
+table.leg-table{display:none}
+
+@media (min-width:640px){
+  .leg-rows{display:none}
+  table.leg-table{display:table;width:100%;border-collapse:collapse;font-size:14px}
+  .leg-table caption{
+    text-align:left;
+    font-size:12px;
+    color:var(--text-3);
+    padding-bottom:10px;
+  }
+  .leg-table th,.leg-table td{
+    text-align:left;
+    padding:12px 10px;
+    border-bottom:1px solid rgba(255,255,255,0.12);
+    vertical-align:top;
+  }
+  .leg-table th{
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:0.08em;
+    color:var(--text-3);
+    font-weight:600;
+  }
+  .leg-table td:first-child,.leg-table th:first-child{
+    width:56px;
+    font-variant-numeric:tabular-nums;
+    color:var(--text-3);
+  }
+  .leg-table td:last-child,.leg-table th:last-child{
+    width:120px;
+    text-align:right;
+    font-weight:700;
+  }
+  .leg-table tbody tr:last-child td{border-bottom:0}
+  .leg-table-wrap{padding:6px 8px}
+}
+
+/* ---------- facts ---------- */
+.fact{
+  display:flex;
+  gap:12px;
+  padding:14px 16px;
+  margin-bottom:10px;
+  align-items:flex-start;
+}
+.fact-num{
+  font-size:12px;
+  font-weight:700;
+  color:var(--accent);
+  letter-spacing:0.06em;
+  flex:0 0 auto;
+  padding-top:2px;
+  min-width:20px;
+}
+.fact-text{
+  font-size:14.5px;
+  line-height:1.55;
+  color:var(--text-2);
+  text-wrap:pretty;
+}
+
+/* ---------- quiz ---------- */
+.quiz-shell{
+  border-radius:var(--r-card);
+}
+.quiz-pad{padding:20px}
+.quiz-title{
+  font-size:24px;
+  font-weight:700;
+  letter-spacing:-0.01em;
+}
+.quiz-lead{
+  margin-top:8px;
+  font-size:14.5px;
+  color:var(--text-2);
+  text-wrap:pretty;
+}
+.quiz-meta{
+  margin-top:14px;
+  font-size:13px;
+  color:var(--text-3);
+}
+.q-head{
+  display:flex;
+  align-items:baseline;
+  justify-content:space-between;
+  gap:12px;
+  font-size:13px;
+  font-weight:600;
+}
+.q-head .q-count{color:var(--text-2)}
+.q-head .q-score{color:var(--text-3)}
+.seg-bar{
+  display:grid;
+  grid-template-columns:repeat(25,1fr);
+  gap:3px;
+  margin-top:10px;
+}
+.seg{
+  height:6px;
+  border-radius:2px;
+  background:rgba(255,255,255,0.14);
+  border:1px solid transparent;
+}
+.seg.current{background:rgba(255,255,255,0.20);border-color:var(--accent)}
+.seg.ok{background:var(--success);border-color:var(--success)}
+.seg.no{background:var(--danger);border-color:var(--danger)}
+.completion{
+  height:3px;
+  border-radius:999px;
+  background:rgba(255,255,255,0.10);
+  margin-top:10px;
+  overflow:hidden;
+}
+.completion-fill{
+  height:100%;
+  width:0%;
+  background:var(--accent);
+  transition:width .3s linear;
+}
+.q-text{
+  font-size:18px;
+  font-weight:600;
+  line-height:1.4;
+  margin:18px 0 14px;
+  text-wrap:pretty;
+}
+.opt-list{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+.opt{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  min-height:52px;
+  width:100%;
+  padding:10px 14px;
+  border-radius:16px;
+  border:1px solid var(--glass-border);
+  background:var(--glass-strong);
+  text-align:left;
+  font-size:14.5px;
+  line-height:1.4;
+  color:var(--text);
+  transition:border-color .2s linear,background .2s linear;
+}
+.opt .letter{
+  flex:0 0 auto;
+  width:26px;height:26px;
+  border-radius:9px;
+  border:1px solid rgba(255,255,255,0.24);
+  display:flex;align-items:center;justify-content:center;
+  font-size:12px;font-weight:700;
+  color:var(--text-2);
+}
+.opt-text{flex:1 1 auto;text-wrap:pretty}
+.opt-mark{
+  flex:0 0 auto;
+  display:none;
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:0.06em;
+  text-transform:uppercase;
+}
+opt.mark{display:none}
+.opt-mark svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.opt.correct{
+  border-color:var(--success);
+  background:rgba(52,201,139,0.16);
+}
+.opt.correct .letter{border-color:var(--success);color:var(--success)}
+.opt.correct .opt-mark{display:inline-flex;align-items:center;gap:6px;color:var(--success)}
+.opt.wrong{
+  border-color:var(--danger);
+  background:rgba(240,97,109,0.16);
+}
+.opt.wrong .letter{border-color:var(--danger);color:var(--danger)}
+.opt.wrong .opt-mark{display:inline-flex;align-items:center;gap:6px;color:var(--danger)}
+.opt:disabled{cursor:default;opacity:1}
+.opt.dimmed{opacity:0.6}
+.explain{
+  margin-top:14px;
+  padding:14px 16px;
+  border-radius:16px;
+  background:rgba(255,255,255,0.07);
+  border:1px solid rgba(255,255,255,0.14);
+  font-size:13.5px;
+  line-height:1.55;
+  color:var(--text-2);
+  text-wrap:pretty;
+}
+.explain strong{display:block;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-3);margin-bottom:5px}
+.q-actions{margin-top:16px;display:flex;justify-content:flex-end}
+.q-actions .btn{min-width:120px}
+
+/* result */
+.result-head{
+  display:flex;
+  align-items:center;
+  gap:18px;
+  margin-bottom:18px;
+  flex-wrap:wrap;
+}
+.ring{flex:0 0 auto}
+.ring svg{width:120px;height:120px;display:block}
+.ring-track{stroke:rgba(255,255,255,0.12)}
+.ring-fill{stroke:var(--accent)}
+.result-score{
+  font-size:26px;
+  font-weight:800;
+  letter-spacing:-0.02em;
+  line-height:1.1;
+}
+.result-pct{
+  font-size:14px;
+  color:var(--text-2);
+  margin-top:4px;
+}
+.result-msg{
+  font-size:14px;
+  color:var(--text);
+  font-weight:600;
+  margin-top:8px;
+  text-wrap:pretty;
+}
+.cat-block{margin-top:6px}
+.cat-row{margin-bottom:12px}
+.cat-top{
+  display:flex;
+  align-items:baseline;
+  justify-content:space-between;
+  gap:10px;
+  font-size:13px;
+  margin-bottom:6px;
+}
+.cat-name{color:var(--text-2);font-weight:600}
+.cat-val{color:var(--text-3)}
+.bar{
+  height:8px;
+  border-radius:999px;
+  background:rgba(255,255,255,0.12);
+  overflow:hidden;
+}
+.bar-fill{
+  height:100%;
+  background:var(--success);
+  border-radius:999px;
+  transition:width .5s var(--ease);
+}
+details.review{
+  margin-top:16px;
+  border-radius:16px;
+  border:1px solid var(--glass-border);
+  background:rgba(255,255,255,0.06);
+  padding:0 14px;
+}
+details.review summary{
+  cursor:pointer;
+  list-style:none;
+  padding:14px 0;
+  font-size:13.5px;
+  font-weight:600;
+  color:var(--text);
+  min-height:44px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+}
+details.review summary::-webkit-details-marker{display:none}
+details.review summary svg{width:16px;height:16px;stroke:var(--text-3);fill:none;stroke-width:1.75;stroke-linecap:round}
+.review-item{
+  padding:12px 0;
+  border-top:1px solid rgba(255,255,255,0.10);
+  font-size:13px;
+  line-height:1.5;
+}
+.review-q{font-weight:600;color:var(--text);margin-bottom:6px;text-wrap:pretty}
+.review-line{color:var(--text-2)}
+.review-line.is-good{color:var(--success)}
+.review-line.is-bad{color:var(--danger)}
+.result-actions{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  margin-top:16px;
+}
+.best-line{
+  margin-top:12px;
+  font-size:12.5px;
+  color:var(--text-3);
+}
+
+/* ---------- footer ---------- */
+footer{
+  position:relative;
+  z-index:1;
+  padding:32px 0 calc(120px + env(safe-area-inset-bottom));
+}
+.foot-text{
+  font-size:11.5px;
+  line-height:1.6;
+  color:var(--text-3);
+  margin-bottom:8px;
+  text-wrap:pretty;
+}
+
+/* ---------- dock ---------- */
+.dock{
+  position:fixed;
+  left:50%;
+  bottom:calc(12px + env(safe-area-inset-bottom));
+  transform:translateX(-50%);
+  z-index:55;
+  display:flex;
+  gap:2px;
+  padding:6px;
+  border-radius:22px;
+  background:var(--glass);
+  -webkit-backdrop-filter:blur(18px) saturate(140%);
+  backdrop-filter:blur(18px) saturate(140%);
+  border:1px solid var(--glass-border);
+  box-shadow:0 12px 40px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.28);
+}
+.dock-item{
+  min-width:66px;
+  min-height:44px;
+  padding:6px 8px;
+  border-radius:16px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:3px;
+  color:var(--text-3);
+  font-size:10px;
+  font-weight:600;
+  letter-spacing:0.02em;
+}
+.dock-item svg{width:19px;height:19px;stroke:currentColor;fill:none;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round}
+.dock-item[aria-current="true"]{color:var(--text);background:var(--glass-strong)}
+
+/* ---------- index sheet ---------- */
+.sheet-backdrop{
+  position:fixed;
+  inset:0;
+  z-index:70;
+  background:rgba(4,7,14,0.62);
+  opacity:0;
+  pointer-events:none;
+  transition:opacity .3s linear;
+}
+.sheet-backdrop.open{opacity:1;pointer-events:auto}
+.sheet{
+  position:fixed;
+  left:0;right:0;bottom:0;
+  z-index:71;
+  max-height:84svh;
+  overflow-y:auto;
+  -webkit-overflow-scrolling:touch;
+  border-radius:28px 28px 0 0;
+  border:1px solid var(--glass-border);
+  border-bottom:0;
+  background:var(--glass);
+  -webkit-backdrop-filter:blur(18px) saturate(140%);
+  backdrop-filter:blur(18px) saturate(140%);
+  box-shadow:0 -12px 40px rgba(0,0,0,0.45);
+  padding:16px var(--page-pad) calc(24px + env(safe-area-inset-bottom));
+  transform:translateY(105%);
+  transition:transform .38s var(--ease);
+}
+.sheet.open{transform:translateY(0)}
+.sheet-head{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  margin-bottom:14px;
+}
+.sheet-title{font-size:20px;font-weight:700;letter-spacing:-0.01em}
+.sheet-close{
+  min-height:44px;
+  min-width:44px;
+  border-radius:14px;
+  border:1px solid var(--glass-border);
+  background:var(--glass-strong);
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+}
+.sheet-close svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:1.75;stroke-linecap:round}
+.sheet-group-label{
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:0.08em;
+  font-weight:600;
+  color:var(--text-3);
+  margin:16px 0 8px;
+}
+.sheet-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:8px;
+}
+.sheet-item{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  min-height:44px;
+  padding:8px 10px;
+  border-radius:14px;
+  border:1px solid rgba(255,255,255,0.14);
+  background:rgba(255,255,255,0.07);
+  color:var(--text);
+  font-size:13px;
+  font-weight:600;
+  text-align:left;
+}
+.sheet-item span.sn{
+  color:var(--text-3);
+  font-size:11px;
+  font-weight:700;
+  flex:0 0 auto;
+}
+.sheet-links{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:8px;
+  margin-top:6px;
+}
+.sheet-link{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+  min-height:48px;
+  padding:10px 14px;
+  border-radius:14px;
+  border:1px solid rgba(255,255,255,0.14);
+  background:rgba(255,255,255,0.07);
+  color:var(--text);
+  font-size:14px;
+  font-weight:600;
+}
+.sheet-link svg{width:16px;height:16px;stroke:var(--text-3);fill:none;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round}
+
+/* ---------- reveal / motion ---------- */
+.rv{opacity:1;transform:none}
+.js .rv{
+  opacity:0;
+  transform:translateY(32px) translateZ(-60px) rotateX(8deg);
+  transition:transform .7s var(--ease),opacity .7s var(--ease);
+  transition-delay:var(--d,0ms);
+}
+.js .in .rv{opacity:1;transform:none}
+.js .in .rv.z-tile{transform:translateZ(12px)}
+.js .in .rv.z-photo{transform:translateZ(24px)}
+.float{animation:none}
+.js .in .float{
+  animation:drift 7s ease-in-out infinite alternate;
+  animation-play-state:running;
+}
+.float{animation-play-state:paused}
+@keyframes drift{
+  from{transform:translateY(0)}
+  to{transform:translateY(-5px)}
+}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto;scroll-snap-type:none}
+  .js .rv,.rv{
+    opacity:1 !important;
+    transform:none !important;
+    transition:opacity .2s linear !important;
+    transition-delay:0ms !important;
+  }
+  .js .in .float,.float,.chip-float,.scroll-cue svg{animation:none !important}
+  .scene{transition:opacity .2s linear}
+  .scene.dim{opacity:1;transform:none}
+  .shape{transform:none !important}
+}
+@media (min-width:768px){
+  .scene-inner,.wrap,.topbar-inner{max-width:480px}
+  .leg-wide .wrap{max-width:760px}
+}
+.leg-wide .wrap{max-width:760px}
+</style>
+</head>
+<body>
+<div class="bg-layer" aria-hidden="true">
+  <div class="shape shape-1" data-speed="0.08"></div>
+  <div class="shape shape-2" data-speed="0.15"></div>
+  <div class="shape shape-3" data-speed="0.25" style="rotate:18deg"></div>
+  <div class="shape shape-4" data-speed="0.35"></div>
+</div>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="tb-left">
+      <span class="tb-section" id="tbSection">Overview</span>
+      <span class="tb-count" id="tbCount"></span>
+    </div>
+    <button class="tb-btn" id="indexBtn" aria-haspopup="dialog" aria-expanded="false" aria-controls="indexSheet">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      Index
+    </button>
+  </div>
+  <div class="progress-line" aria-hidden="true"><div class="progress-fill" id="progressFill"></div></div>
+</header>
+
+<main>
+  <section class="scene" id="top" aria-labelledby="hero-title" data-tb="Overview" data-snap="1">
+    <div class="scene-inner">
+      <div class="hero-inner">
+        <h1 class="hero-title rv" id="hero-title" style="--d:0ms">Governors &amp; Chief Ministers of India 2026</h1>
+        <p class="hero-sub rv" style="--d:80ms">Updated list of all 28 States and 8 Union Territories</p>
+        <p class="hero-source rv" style="--d:140ms">Based on the lecture by Dewashish Sir, Current Affairs Updated, October 14, 2026</p>
+        <div class="chip-row rv" style="--d:200ms">
+          <span class="chip chip-float">28 States</span>
+          <span class="chip chip-float">8 Union Territories</span>
+          <span class="chip chip-float">6 Bicameral States</span>
+          <span class="chip chip-float">25-Question Quiz</span>
+        </div>
+        <div class="hero-actions rv" style="--d:260ms">
+          <a class="btn btn-primary" href="#states">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H10l2 2h6.5A1.5 1.5 0 0 1 20 7.5v10A1.5 1.5 0 0 1 18.5 19h-13A1.5 1.5 0 0 1 4 17.5z"/><path d="M8 12h8M8 15.5h5"/></svg>
+            Start Reading
+          </a>
+          <a class="btn" href="#quiz">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 9a3 3 0 1 1 4.2 2.7c-.9.5-1.2 1.1-1.2 2.1"/><path d="M12 17.5h.01"/><circle cx="12" cy="12" r="9"/></svg>
+            Take the Quiz
+          </a>
+        </div>
+        <div class="scroll-cue rv" style="--d:320ms" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="states">
+    <div class="wrap">
+      <div class="section-intro" data-tb="States">
+        <h2 class="section-title">States</h2>
+        <p class="section-sub">28 States, in the order of the lecture. Scroll to move to the next state.</p>
+      </div>
+    </div>
+    <div id="stateScenes"></div>
+  </section>
+
+  <section id="territories">
+    <div class="wrap">
+      <div class="section-intro" data-tb="Union Territories">
+        <h2 class="section-title">Union Territories</h2>
+        <p class="section-sub">8 Union Territories with their Lieutenant Governors or Administrators.</p>
+      </div>
+    </div>
+    <div id="utScenes"></div>
+    <div class="closing-note">
+      <div class="glass rv">
+        Only Delhi, Puducherry and Jammu &amp; Kashmir have a Legislative Assembly. The other five Union Territories do not.
+      </div>
+    </div>
+  </section>
+
+  <section id="legislatures" class="leg-wide">
+    <div class="wrap">
+      <div class="section-intro" data-tb="Bicameral Legislatures">
+        <h2 class="section-title">Bicameral Legislatures</h2>
+        <p class="section-sub">Six states have two houses.</p>
+      </div>
+      <div class="leg-rows" id="legRows"></div>
+      <div class="glass leg-table-wrap"><table class="leg-table" id="legTable"></table></div>
+      <div style="height:24px"></div>
+    </div>
+  </section>
+
+  <section id="facts">
+    <div class="wrap">
+      <div class="section-intro" data-tb="Key Facts">
+        <h2 class="section-title">Key Facts to Remember</h2>
+      </div>
+      <div id="factList"></div>
+      <div style="height:24px"></div>
+    </div>
+  </section>
+
+  <section id="quiz">
+    <div class="wrap">
+      <div class="section-intro" data-tb="Quiz">
+        <h2 class="section-title">Quiz</h2>
+        <p class="section-sub">One test, 25 questions, instant feedback.</p>
+      </div>
+      <div id="quizRoot"></div>
+      <div style="height:16px"></div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p class="foot-text">Content compiled from the lecture &ldquo;Governors &amp; Chief Ministers 2026&rdquo; by Dewashish Sir (Current Affairs Updated channel, October 14, 2026).</p>
+    <p class="foot-text">Photos are sourced from Wikimedia Commons and official government websites; rights belong to their respective owners.</p>
+    <p class="foot-text">For exam revision. Verify with official sources before relying on this information elsewhere.</p>
+  </div>
+</footer>
+
+<nav class="dock" aria-label="Sections">
+  <a class="dock-item" href="#states" data-dock="states" aria-current="false">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3.5v11L12 21l-7-3.5v-11z"/><path d="M12 3v18M5 6.5l14 4.5"/></svg>
+    States
+  </a>
+  <a class="dock-item" href="#territories" data-dock="territories" aria-current="false">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 8v8M8 12h8"/></svg>
+    Territories
+  </a>
+  <a class="dock-item" href="#legislatures" data-dock="legislatures" aria-current="false">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19V9M10 19V5M16 19v-7M22 19H2"/></svg>
+    Legislatures
+  </a>
+  <a class="dock-item" href="#quiz" data-dock="quiz" aria-current="false">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.4 2.3c-.6.3-.9.8-.9 1.4M12 16.5h.01"/></svg>
+    Quiz
+  </a>
+</nav>
+
+<div class="sheet-backdrop" id="sheetBackdrop"></div>
+<div class="sheet" id="indexSheet" role="dialog" aria-modal="true" aria-labelledby="sheetTitle">
+  <div class="sheet-head">
+    <h2 class="sheet-title" id="sheetTitle">Index</h2>
+    <button class="sheet-close" id="sheetClose" aria-label="Close index">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+  </div>
+  <div class="sheet-group-label">States</div>
+  <div class="sheet-grid" id="sheetStates"></div>
+  <div class="sheet-group-label">Union Territories</div>
+  <div class="sheet-grid" id="sheetUts"></div>
+  <div class="sheet-group-label">More</div>
+  <div class="sheet-links">
+    <a class="sheet-link" href="#legislatures">Bicameral Legislatures <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+    <a class="sheet-link" href="#facts">Key Facts <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+    <a class="sheet-link" href="#quiz">Quiz <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+  </div>
+</div>
+
+<script>
+"use strict";
+document.documentElement.classList.add('js');
+
+/* =========================================================
+   PHOTOS — 192 x 192 JPEG crops, embedded as data URIs.
+   Every entry is the Wikimedia Commons / Wikipedia infobox
+   portrait of the person. Source page comments above each key.
+   ========================================================= */
+const PHOTOS = /*PHOTOS*/{};
+
+/* =========================================================
+   DATA (source of truth: PRD section 8)
+   ========================================================= */
+const STATES = [
+  {no:1,id:"sikkim",name:"Sikkim",capital:"Gangtok",capitalNote:"",note:"",
+   cm:{name:"Prem Singh Tamang",party:"Sikkim Krantikari Morcha (SKM)",pid:"prem-singh-tamang",isNew:false},
+   gov:{name:"Dushyant Gautam",pid:"dushyant-gautam",isNew:true},rs:1,ls:1,vs:32,vp:null},
+  {no:2,id:"uttarakhand",name:"Uttarakhand",capital:"Dehradun",capitalNote:"",note:"",
+   cm:{name:"Pushkar Singh Dhami",party:"Bharatiya Janata Party (BJP)",pid:"pushkar-singh-dhami",isNew:false},
+   gov:{name:"Dr. Dhal Singh Bisen",pid:"dhal-singh-bisen",isNew:true},rs:3,ls:5,vs:70,vp:null},
+  {no:3,id:"karnataka",name:"Karnataka",capital:"Bengaluru",capitalNote:"",note:"Two houses",
+   cm:{name:"D. K. Shivakumar",party:"Indian National Congress (INC)",pid:"d-k-shivakumar",isNew:true},
+   gov:{name:"Dr. Sudha Yadav",pid:"sudha-yadav",isNew:true},rs:12,ls:28,vs:224,vp:75},
+  {no:4,id:"odisha",name:"Odisha",capital:"Bhubaneswar",capitalNote:"",note:"",
+   cm:{name:"Mohan Charan Majhi",party:"Bharatiya Janata Party (BJP)",pid:"mohan-charan-majhi",isNew:false},
+   gov:{name:"Brijmohan Ram",pid:"brijmohan-ram",isNew:true},rs:10,ls:21,vs:147,vp:null},
+  {no:5,id:"tamil-nadu",name:"Tamil Nadu",capital:"Chennai",capitalNote:"",note:"",
+   cm:{name:"C. Joseph Vijay",party:"Tamilaga Vettri Kazhagam (TVK)",pid:"c-joseph-vijay",isNew:true},
+   gov:{name:"Rajendra Arlekar",pid:"rajendra-arlekar",isNew:true},rs:18,ls:39,vs:234,vp:null},
+  {no:6,id:"keralam",name:"Keralam",capital:"Thiruvananthapuram",capitalNote:"",note:"Formerly Kerala. Congress is the largest party in the UDF.",
+   cm:{name:"V. D. Satheesan",party:"Indian National Congress (INC), United Democratic Front (UDF)",pid:"v-d-satheesan",isNew:true},
+   gov:{name:"Om Prakash Mathur",pid:"om-prakash-mathur",isNew:true},rs:9,ls:20,vs:140,vp:null},
+  {no:7,id:"west-bengal",name:"West Bengal",capital:"Kolkata",capitalNote:"on the Hooghly River",note:"",
+   cm:{name:"Suvendu Adhikari",party:"Bharatiya Janata Party (BJP)",pid:"suvendu-adhikari",isNew:false},
+   gov:{name:"R. N. Ravi",pid:"r-n-ravi",isNew:false},rs:16,ls:42,vs:294,vp:null},
+  {no:8,id:"assam",name:"Assam",capital:"Dispur",capitalNote:"",note:"",
+   cm:{name:"Himanta Biswa Sarma",party:"Bharatiya Janata Party (BJP)",pid:"himanta-biswa-sarma",isNew:false},
+   gov:{name:"Lakshman Prasad Acharya",pid:"lakshman-prasad-acharya",isNew:false},rs:7,ls:14,vs:126,vp:null},
+  {no:9,id:"goa",name:"Goa",capital:"Panaji",capitalNote:"",note:"",
+   cm:{name:"Pramod Sawant",party:"Bharatiya Janata Party (BJP)",pid:"pramod-sawant",isNew:false},
+   gov:{name:"Pusapati Ashok Gajapathi Raju",pid:"pusapati-ashok-gajapathi-raju",isNew:true},rs:1,ls:2,vs:40,vp:null},
+  {no:10,id:"haryana",name:"Haryana",capital:"Chandigarh",capitalNote:"",note:"Chandigarh is the common capital with Punjab",
+   cm:{name:"Nayab Singh Saini",party:"Bharatiya Janata Party (BJP)",pid:"nayab-singh-saini",isNew:false},
+   gov:{name:"Prof. Ashim Kumar Ghosh",pid:"ashim-kumar-ghosh",isNew:false},rs:5,ls:10,vs:90,vp:null},
+  {no:11,id:"bihar",name:"Bihar",capital:"Patna",capitalNote:"",note:"Two houses",
+   cm:{name:"Samrat Choudhary",party:"Bharatiya Janata Party (BJP)",pid:"samrat-choudhary",isNew:false},
+   gov:{name:"Syed Ata Hasnain",pid:"syed-ata-hasnain",isNew:false},rs:16,ls:40,vs:243,vp:75},
+  {no:12,id:"chhattisgarh",name:"Chhattisgarh",capital:"Raipur",capitalNote:"",note:"",
+   cm:{name:"Vishnu Deo Sai",party:"Bharatiya Janata Party (BJP)",pid:"vishnu-deo-sai",isNew:false},
+   gov:{name:"Ramen Deka",pid:"ramen-deka",isNew:false},rs:5,ls:11,vs:90,vp:null},
+  {no:13,id:"andhra-pradesh",name:"Andhra Pradesh",capital:"Amaravati",capitalNote:"",note:"Two houses",
+   cm:{name:"N. Chandrababu Naidu",party:"Telugu Desam Party (TDP)",pid:"n-chandrababu-naidu",isNew:false},
+   gov:{name:"Justice (Retd.) S. Abdul Nazeer",pid:"s-abdul-nazeer",isNew:false},rs:11,ls:25,vs:175,vp:58},
+  {no:14,id:"gujarat",name:"Gujarat",capital:"Gandhinagar",capitalNote:"not Ahmedabad",note:"",
+   cm:{name:"Bhupendra Patel",party:"Bharatiya Janata Party (BJP)",pid:"bhupendra-patel",isNew:false},
+   gov:{name:"Acharya Devvrat",pid:"acharya-devvrat",isNew:false},rs:11,ls:26,vs:182,vp:null},
+  {no:15,id:"arunachal-pradesh",name:"Arunachal Pradesh",capital:"Itanagar",capitalNote:"",note:"",
+   cm:{name:"Pema Khandu",party:"Bharatiya Janata Party (BJP)",pid:"pema-khandu",isNew:false},
+   gov:{name:"Lt Gen (Retd.) K. T. Parnaik",pid:"k-t-parnaik",isNew:false},rs:1,ls:2,vs:60,vp:null},
+  {no:16,id:"himachal-pradesh",name:"Himachal Pradesh",capital:"Shimla",capitalNote:"",note:"",
+   cm:{name:"Sukhvinder Singh Sukhu",party:"Indian National Congress (INC)",pid:"sukhvinder-singh-sukhu",isNew:false},
+   gov:{name:"Kavinder Gupta",pid:"kavinder-gupta",isNew:false},rs:3,ls:4,vs:68,vp:null},
+  {no:17,id:"jharkhand",name:"Jharkhand",capital:"Ranchi",capitalNote:"",note:"CM is a member of the INDIA bloc",
+   cm:{name:"Hemant Soren",party:"Jharkhand Mukti Morcha (JMM)",pid:"hemant-soren",isNew:false},
+   gov:{name:"Santosh Kumar Gangwar",pid:"santosh-kumar-gangwar",isNew:false},rs:6,ls:14,vs:81,vp:null},
+  {no:18,id:"madhya-pradesh",name:"Madhya Pradesh",capital:"Bhopal",capitalNote:"",note:"",
+   cm:{name:"Mohan Yadav",party:"Bharatiya Janata Party (BJP)",pid:"mohan-yadav",isNew:false},
+   gov:{name:"Mangubhai Chhaganbhai Patel",pid:"mangubhai-chhaganbhai-patel",isNew:false},rs:11,ls:29,vs:230,vp:null},
+  {no:19,id:"maharashtra",name:"Maharashtra",capital:"Mumbai",capitalNote:"",note:"Two houses",
+   cm:{name:"Devendra Fadnavis",party:"Bharatiya Janata Party (BJP)",pid:"devendra-fadnavis",isNew:false},
+   gov:{name:"Vishnu Dev Verma",pid:"vishnu-dev-verma",isNew:false},rs:19,ls:48,vs:288,vp:78},
+  {no:20,id:"meghalaya",name:"Meghalaya",capital:"Shillong",capitalNote:"",note:"",
+   cm:{name:"Conrad K. Sangma",party:"National People's Party (NPP)",pid:"conrad-k-sangma",isNew:false},
+   gov:{name:"C. H. Vijayashankar",pid:"c-h-vijayashankar",isNew:false},rs:1,ls:2,vs:60,vp:null},
+  {no:21,id:"manipur",name:"Manipur",capital:"Imphal",capitalNote:"",note:"",
+   cm:{name:"Yumnam Khemchand Singh",party:"Bharatiya Janata Party (BJP)",pid:"yumnam-khemchand-singh",isNew:false},
+   gov:{name:"Ajay Kumar Bhalla",pid:"ajay-kumar-bhalla",isNew:false},rs:1,ls:2,vs:60,vp:null},
+  {no:22,id:"mizoram",name:"Mizoram",capital:"Aizawl",capitalNote:"",note:"",
+   cm:{name:"Lalduhoma",party:"Zoram People's Movement (ZPM)",pid:"lalduhoma",isNew:false},
+   gov:{name:"V. K. Singh",pid:"v-k-singh",isNew:false},rs:1,ls:1,vs:40,vp:null},
+  {no:23,id:"nagaland",name:"Nagaland",capital:"Kohima",capitalNote:"",note:"",
+   cm:{name:"Neiphiu Rio",party:"Nationalist Democratic Progressive Party (NDPP)",pid:"neiphiu-rio",isNew:false},
+   gov:{name:"Nand Kishore Yadav",pid:"nand-kishore-yadav",isNew:false},rs:1,ls:1,vs:60,vp:null},
+  {no:24,id:"punjab",name:"Punjab",capital:"Chandigarh",capitalNote:"",note:"Chandigarh is the common capital with Haryana",
+   cm:{name:"Bhagwant Singh Mann",party:"Aam Aadmi Party (AAP)",pid:"bhagwant-singh-mann",isNew:false},
+   gov:{name:"Gulab Chand Kataria",pid:"gulab-chand-kataria",isNew:false},rs:7,ls:13,vs:117,vp:null},
+  {no:25,id:"rajasthan",name:"Rajasthan",capital:"Jaipur",capitalNote:"the Pink City",note:"",
+   cm:{name:"Bhajan Lal Sharma",party:"Bharatiya Janata Party (BJP)",pid:"bhajan-lal-sharma",isNew:false},
+   gov:{name:"Hari Bhau Kisanrao Bagde",pid:"hari-bhau-kisanrao-bagde",isNew:false},rs:10,ls:25,vs:200,vp:null},
+  {no:26,id:"telangana",name:"Telangana",capital:"Hyderabad",capitalNote:"on the Musi River",note:"Two houses",
+   cm:{name:"Revanth Reddy",party:"Indian National Congress (INC)",pid:"revanth-reddy",isNew:false},
+   gov:{name:"Shiv Pratap Shukla",pid:"shiv-pratap-shukla",isNew:false},rs:7,ls:17,vs:119,vp:40},
+  {no:27,id:"tripura",name:"Tripura",capital:"Agartala",capitalNote:"",note:"",
+   cm:{name:"Manik Saha",party:"Bharatiya Janata Party (BJP)",pid:"manik-saha",isNew:false},
+   gov:{name:"Indrasena Reddy",pid:"indrasena-reddy",isNew:false},rs:1,ls:2,vs:60,vp:null},
+  {no:28,id:"uttar-pradesh",name:"Uttar Pradesh",capital:"Lucknow",capitalNote:"on the Gomti River",note:"Two houses",
+   cm:{name:"Yogi Adityanath",party:"Bharatiya Janata Party (BJP)",pid:"yogi-adityanath",isNew:false},
+   gov:{name:"Anandiben Patel",pid:"anandiben-patel",isNew:false},rs:31,ls:80,vs:403,vp:100}
+];
+
+const UTS = [
+  {no:1,id:"ladakh",name:"Ladakh",capital:"Leh",capitalNote:"",note:"",
+   lgg:{role:"Lieutenant Governor",name:"V. K. (Vinay Kumar) Saxena",pid:"v-k-saxena",isNew:false},
+   cm:null,rs:"–",ls:0,vs:"none"},
+  {no:2,id:"puducherry",name:"Puducherry",capital:"Puducherry",capitalNote:"",note:"",
+   lgg:{role:"Lieutenant Governor",name:"K. Kailashnathan",pid:"k-kailashnathan",isNew:false},
+   cm:{name:"N. Rangasamy",party:"NDA alliance",pid:"n-rangasamy",isNew:false},rs:1,ls:1,vs:30},
+  {no:3,id:"jammu-kashmir",name:"Jammu & Kashmir",capital:"Srinagar (summer) and Jammu (winter)",capitalNote:"",note:"",
+   lgg:{role:"Lieutenant Governor",name:"Manoj Sinha",pid:"manoj-sinha",isNew:false},
+   cm:{name:"Omar Abdullah",party:"National Conference. Member of the INDIA bloc",pid:"omar-abdullah",isNew:false},rs:4,ls:5,vs:90},
+  {no:4,id:"delhi",name:"Delhi",capital:"",capitalNote:"",note:"",
+   lgg:{role:"Lieutenant Governor",name:"Taranjit Singh Sandhu",pid:"taranjit-singh-sandhu",isNew:false},
+   cm:{name:"Rekha Gupta",party:"Bharatiya Janata Party (BJP)",pid:"rekha-gupta",isNew:false},rs:3,ls:7,vs:70},
+  {no:5,id:"andaman-nicobar",name:"Andaman and Nicobar Islands",capital:"Sri Vijayapuram (formerly Port Blair)",capitalNote:"",note:"",
+   lgg:{role:"Lieutenant Governor",name:"Dinesh Sharma",pid:"dinesh-sharma",isNew:true},
+   cm:null,rs:"–",ls:0,vs:"none"},
+  {no:6,id:"chandigarh",name:"Chandigarh",capital:"",capitalNote:"",note:"The Governor of Punjab serves as the Administrator of Chandigarh",
+   lgg:{role:"Administrator",name:"Gulab Chand Kataria",pid:"gulab-chand-kataria",isNew:false},
+   cm:null,rs:"–",ls:0,vs:"none"},
+  {no:7,id:"dadra-daman-diu",name:"Dadra and Nagar Haveli and Daman and Diu",capital:"Daman",capitalNote:"",note:"",
+   lgg:{role:"Administrator",name:"Praful Patel",pid:"praful-patel",isNew:false},
+   cm:null,rs:"–",ls:0,vs:"none"},
+  {no:8,id:"lakshadweep",name:"Lakshadweep",capital:"Kavaratti",capitalNote:"",note:"Also the Administrator of Dadra and Nagar Haveli and Daman and Diu",
+   lgg:{role:"Administrator",name:"Praful Patel",pid:"praful-patel",isNew:false},
+   cm:null,rs:"–",ls:0,vs:"none"}
+];
+
+const BICAMERAL = [
+  {no:1,state:"Andhra Pradesh",seats:58},
+  {no:2,state:"Bihar",seats:75},
+  {no:3,state:"Karnataka",seats:75},
+  {no:4,state:"Maharashtra",seats:78},
+  {no:5,state:"Telangana",seats:40},
+  {no:6,state:"Uttar Pradesh",seats:100}
+];
+
+const FACTS = [
+  "Gujarat's capital is Gandhinagar, not Ahmedabad.",
+  "Chandigarh is the common capital of Punjab and Haryana.",
+  "The Governor of Punjab also serves as the Administrator of Chandigarh (currently Gulab Chand Kataria).",
+  "Jaipur, the capital of Rajasthan, is known as the Pink City.",
+  "Hyderabad stands on the Musi River, Kolkata on the Hooghly River, and Lucknow on the Gomti River.",
+  "Kerala has been renamed Keralam.",
+  "Jammu and Kashmir has two capitals: Srinagar in summer and Jammu in winter.",
+  "Port Blair, the capital of the Andaman and Nicobar Islands, has been renamed Sri Vijayapuram.",
+  "Praful Patel is the common Administrator of Dadra and Nagar Haveli and Daman and Diu, and Lakshadweep.",
+  "Six states have two houses (Vidhan Sabha and Vidhan Parishad): Andhra Pradesh, Bihar, Karnataka, Maharashtra, Telangana and Uttar Pradesh.",
+  "Legislative Council seats: Uttar Pradesh 100, Maharashtra 78, Bihar 75, Karnataka 75, Andhra Pradesh 58, Telangana 40.",
+  "Only three Union Territories have a Legislative Assembly: Delhi (70 seats), Puducherry (30 seats) and Jammu and Kashmir (90 seats).",
+  "Five Union Territories have zero Rajya Sabha seats: Ladakh, Andaman and Nicobar Islands, Chandigarh, Dadra and Nagar Haveli and Daman and Diu, and Lakshadweep.",
+  "Women Governors in this list: Dr. Sudha Yadav (Karnataka, newly appointed) and Anandiben Patel (Uttar Pradesh).",
+  "Hemant Soren (Jharkhand) and Omar Abdullah (Jammu and Kashmir) are members of the INDIA bloc.",
+  "Chief Ministers from the Indian National Congress in this list: Karnataka, Keralam, Himachal Pradesh and Telangana."
+];
+
+const QUIZ = [
+  {cat:"States",q:"Who is the newly appointed Governor of Sikkim?",
+   options:["Dushyant Gautam","Ajay Kumar Bhalla","Santosh Kumar Gangwar","Kavinder Gupta"],
+   answer:"Dushyant Gautam",exp:"Dushyant Gautam is the newly appointed Governor of Sikkim."},
+  {cat:"States",q:"Which party does Sikkim's Chief Minister Prem Singh Tamang belong to?",
+   options:["Sikkim Krantikari Morcha","Zoram People's Movement","National People's Party","Nationalist Democratic Progressive Party"],
+   answer:"Sikkim Krantikari Morcha",exp:"Prem Singh Tamang belongs to the Sikkim Krantikari Morcha (SKM)."},
+  {cat:"States",q:"Who is the Governor of Uttarakhand?",
+   options:["Syed Ata Hasnain","Dr. Dhal Singh Bisen","Acharya Devvrat","Mangubhai Chhaganbhai Patel"],
+   answer:"Dr. Dhal Singh Bisen",exp:"Dr. Dhal Singh Bisen is the newly appointed Governor of Uttarakhand."},
+  {cat:"Legislature",q:"How many Lok Sabha seats does Uttarakhand have?",
+   options:["3","4","5","7"],
+   answer:"5",exp:"Uttarakhand has 3 Rajya Sabha seats, 5 Lok Sabha seats and 70 Vidhan Sabha seats."},
+  {cat:"States",q:"Who is the new Chief Minister of Karnataka?",
+   options:["D. K. Shivakumar","Revanth Reddy","Sukhvinder Singh Sukhu","V. D. Satheesan"],
+   answer:"D. K. Shivakumar",exp:"D. K. Shivakumar of the Indian National Congress is the new Chief Minister of Karnataka."},
+  {cat:"States",q:"Who is the Governor of Karnataka?",
+   options:["Anandiben Patel","Dr. Sudha Yadav","Ramen Deka","Om Prakash Mathur"],
+   answer:"Dr. Sudha Yadav",exp:"Dr. Sudha Yadav was recently appointed Governor of Karnataka."},
+  {cat:"Legislature",q:"How many seats does the Karnataka Legislative Council (Vidhan Parishad) have?",
+   options:["58","75","78","100"],
+   answer:"75",exp:"Karnataka has two houses; its Legislative Council has 75 seats."},
+  {cat:"States",q:"Who is the new Governor of Odisha?",
+   options:["Lakshman Prasad Acharya","Hari Bhau Kisanrao Bagde","Brijmohan Ram","Indrasena Reddy"],
+   answer:"Brijmohan Ram",exp:"Brijmohan Ram is the new Governor of Odisha."},
+  {cat:"States",q:"Tamil Nadu's Chief Minister C. Joseph Vijay belongs to which party?",
+   options:["Telugu Desam Party","Tamilaga Vettri Kazhagam","Aam Aadmi Party","Sikkim Krantikari Morcha"],
+   answer:"Tamilaga Vettri Kazhagam",exp:"C. Joseph Vijay leads the Tamilaga Vettri Kazhagam (TVK)."},
+  {cat:"States",q:"Who is the Governor of Tamil Nadu?",
+   options:["R. N. Ravi","Shiv Pratap Shukla","Rajendra Arlekar","Ajay Kumar Bhalla"],
+   answer:"Rajendra Arlekar",exp:"Rajendra Arlekar is the newly appointed Governor of Tamil Nadu."},
+  {cat:"States",q:"What is the new name of the state formerly known as Kerala?",
+   options:["Keralaputra","Keralam","Kerala Pradesh","Malabar"],
+   answer:"Keralam",exp:"Kerala has been renamed Keralam."},
+  {cat:"States",q:"Who is the Chief Minister of Keralam?",
+   options:["Revanth Reddy","D. K. Shivakumar","V. D. Satheesan","Sukhvinder Singh Sukhu"],
+   answer:"V. D. Satheesan",exp:"V. D. Satheesan of the Congress-led United Democratic Front is the Chief Minister of Keralam."},
+  {cat:"States",q:"Who is the Governor of West Bengal?",
+   options:["Om Prakash Mathur","R. N. Ravi","Syed Ata Hasnain","Prof. Ashim Kumar Ghosh"],
+   answer:"R. N. Ravi",exp:"R. N. Ravi is the Governor of West Bengal."},
+  {cat:"Capitals and Geography",q:"On which river is Kolkata situated?",
+   options:["Hooghly","Musi","Gomti","Godavari"],
+   answer:"Hooghly",exp:"Kolkata, the capital of West Bengal, is on the Hooghly River."},
+  {cat:"Capitals and Geography",q:"What is the capital of Gujarat?",
+   options:["Ahmedabad","Surat","Gandhinagar","Vadodara"],
+   answer:"Gandhinagar",exp:"Gandhinagar is the capital of Gujarat, not Ahmedabad."},
+  {cat:"States",q:"Who is the Governor of Goa?",
+   options:["S. Abdul Nazeer","Kavinder Gupta","Indrasena Reddy","Pusapati Ashok Gajapathi Raju"],
+   answer:"Pusapati Ashok Gajapathi Raju",exp:"Pusapati Ashok Gajapathi Raju is the Governor of Goa."},
+  {cat:"Capitals and Geography",q:"Which city is the common capital of Punjab and Haryana?",
+   options:["Shimla","Chandigarh","Delhi","Jaipur"],
+   answer:"Chandigarh",exp:"Chandigarh is the common capital of Punjab and Haryana."},
+  {cat:"States",q:"Who is the Chief Minister of Manipur?",
+   options:["Pema Khandu","Conrad K. Sangma","Yumnam Khemchand Singh","Manik Saha"],
+   answer:"Yumnam Khemchand Singh",exp:"Yumnam Khemchand Singh of the BJP is the Chief Minister of Manipur."},
+  {cat:"Legislature",q:"How many Indian states have a bicameral legislature, as listed in the lecture?",
+   options:["4","5","6","8"],
+   answer:"6",exp:"Six states: Andhra Pradesh, Bihar, Karnataka, Maharashtra, Telangana and Uttar Pradesh."},
+  {cat:"Legislature",q:"Which of these states has a Legislative Council (Vidhan Parishad)?",
+   options:["Gujarat","Rajasthan","Telangana","Odisha"],
+   answer:"Telangana",exp:"Telangana's Legislative Council has 40 seats."},
+  {cat:"Legislature",q:"Which state has the largest Legislative Council, with 100 seats?",
+   options:["Maharashtra","Bihar","Karnataka","Uttar Pradesh"],
+   answer:"Uttar Pradesh",exp:"Uttar Pradesh has 100 seats in its Legislative Council."},
+  {cat:"Union Territories",q:"Which set lists the Union Territories that have a Legislative Assembly?",
+   options:["Delhi, Puducherry, Jammu and Kashmir","Ladakh, Delhi, Puducherry","Chandigarh, Delhi, Jammu and Kashmir","Lakshadweep, Puducherry, Jammu and Kashmir"],
+   answer:"Delhi, Puducherry, Jammu and Kashmir",exp:"Only Delhi (70), Puducherry (30) and Jammu and Kashmir (90) have Legislative Assemblies."},
+  {cat:"Union Territories",q:"Which city is the summer capital of Jammu and Kashmir?",
+   options:["Jammu","Leh","Srinagar","Kavaratti"],
+   answer:"Srinagar",exp:"Srinagar is the summer capital; Jammu is the winter capital."},
+  {cat:"Union Territories",q:"What is the new name of Port Blair, the capital of the Andaman and Nicobar Islands?",
+   options:["Sri Vijayapuram","Kavaratti","Daman","Leh"],
+   answer:"Sri Vijayapuram",exp:"Port Blair has been renamed Sri Vijayapuram."},
+  {cat:"Union Territories",q:"Who is the common Administrator of Lakshadweep and Dadra and Nagar Haveli and Daman and Diu?",
+   options:["Taranjit Singh Sandhu","Manoj Sinha","Praful Patel","K. Kailashnathan"],
+   answer:"Praful Patel",exp:"Praful Patel is the Administrator of both Union Territories."}
+];
+
+/* =========================================================
+   HELPERS
+   ========================================================= */
+const MUTED = ["#1B3A6B","#3A2E6B","#0F5257"];
+function esc(s){
+  return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
+}
+function initialsOf(name){
+  const clean = name.replace(/\([^)]*\)/g," ").replace(/[^A-Za-z.\s]/g," ").trim();
+  const parts = clean.split(/\s+/).filter(function(w){return w.length>1 || /^[A-Z]\.$/.test(w);});
+  const letters = parts.map(function(w){return w.charAt(0).toUpperCase();});
+  if(letters.length===0) return "?";
+  if(letters.length===1) return letters[0];
+  return letters[0] + letters[letters.length-1];
+}
+function mutedFor(name){
+  let h=0;
+  for(let i=0;i<name.length;i++){h=(h*31+name.charCodeAt(i))>>>0;}
+  return MUTED[h%MUTED.length];
+}
+function photoMarkup(person,altRole){
+  const alt = "Portrait of " + person.name + ", " + altRole;
+  const initials = initialsOf(person.name);
+  if(PHOTOS[person.pid]){
+    return '<img src="'+PHOTOS[person.pid]+'" width="88" height="88" loading="lazy" decoding="async" referrerpolicy="no-referrer" alt="'+esc(alt)+'" '+
+      'onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\';" '+
+      '><div class="photo-fallback" style="display:none;background:'+mutedFor(person.name)+'">'+esc(initials)+'</div>';
+  }
+  return '<div class="photo-fallback" style="background:'+mutedFor(person.name)+'" role="img" aria-label="'+esc(alt)+'">'+esc(initials)+'</div>';
+}
+function personTile(role,name,party,pid,isNew,extraNote,delay){
+  const person={name:name,pid:pid};
+  let html = '<div class="person-tile rv z-tile" style="--d:'+delay+'ms">';
+  html += '<div class="person-inner float">';
+  html += '<div class="photo-wrap">'+photoMarkup(person,role)+'</div>';
+  html += '<div class="role">'+esc(role)+'</div>';
+  html += '<div class="name-line"><span class="name-chip">'+esc(name)+'</span>';
+  if(isNew) html += '<span class="new-chip">NEW</span>';
+  html += '</div>';
+  if(party) html += '<div class="party">'+esc(party)+'</div>';
+  if(extraNote) html += '<div class="person-note">'+esc(extraNote)+'</div>';
+  html += '</div></div>';
+  return html;
+}
+function statTile(num,label,caption,delay){
+  return '<div class="stat rv z-tile" style="--d:'+delay+'ms"><div class="stat-inner float">'+
+    '<div class="stat-num">'+esc(String(num))+'</div>'+
+    '<div class="stat-label">'+esc(label)+'</div>'+
+    (caption?'<div class="stat-caption">'+esc(caption)+'</div>':'')+
+    '</div></div>';
+}
+
+/* =========================================================
+   SCENE RENDERERS
+   ========================================================= */
+function stateScene(s){
+  const titleId = "st-"+s.no+"-title";
+  let html = '<section class="scene" id="state-'+s.id+'" data-tb="States" data-idx="'+s.no+'" data-total="28" aria-labelledby="'+titleId+'">';
+  html += '<div class="scene-inner"><article class="glass card" data-tilt="1">';
+  html += '<header class="card-head rv" style="--d:0ms">';
+  html += '<div class="head-top"><span class="badge-num">'+String(s.no).padStart(2,"0")+'</span><span class="badge-of">of 28</span></div>';
+  html += '<h2 class="place-name" id="'+titleId+'">'+esc(s.name)+'</h2>';
+  if(s.note || s.vp){
+    html += '<div class="chip-line">';
+    if(s.vp) html += '<span class="chip">Bicameral</span>';
+    if(s.note) html += '<span class="note-chip">'+esc(s.note)+'</span>';
+    html += '</div>';
+  }
+  html += '</header>';
+  html += '<div class="capital-block rv" style="--d:80ms"><div class="label">Capital</div>'+
+          '<div class="capital-value">'+esc(s.capital)+'</div>'+
+          (s.capitalNote?'<div class="capital-note">'+esc(s.capitalNote)+'</div>':'')+'</div>';
+  html += '<div class="person-grid">';
+  html += personTile("Chief Minister",s.cm.name,s.cm.party,s.cm.pid,s.cm.isNew,"",160);
+  html += personTile("Governor",s.gov.name,"",s.gov.pid,s.gov.isNew,"",240);
+  html += '</div>';
+  html += '<div class="stat-grid">';
+  html += statTile(s.rs,"Rajya Sabha","",320);
+  html += statTile(s.ls,"Lok Sabha","",380);
+  html += statTile(s.vs,"Vidhan Sabha","",440);
+  html += '</div>';
+  if(s.vp){
+    html += '<div class="vp-row rv z-tile" style="--d:500ms"><span class="vp-label">Legislative Council (Vidhan Parishad) seats</span><span class="vp-num">'+s.vp+'</span></div>';
+  }
+  html += '</article></div></section>';
+  return html;
+}
+
+function utScene(t){
+  const titleId = "ut-"+t.no+"-title";
+  const single = !t.cm;
+  let html = '<section class="scene" id="ut-'+t.id+'" data-tb="Union Territories" data-idx="'+t.no+'" data-total="8" aria-labelledby="'+titleId+'">';
+  html += '<div class="scene-inner"><article class="glass card" data-tilt="1">';
+  html += '<header class="card-head rv" style="--d:0ms">';
+  html += '<div class="head-top"><span class="badge-num">'+String(t.no).padStart(2,"0")+'</span><span class="badge-of">of 8</span></div>';
+  html += '<h2 class="place-name" id="'+titleId+'">'+esc(t.name)+'</h2>';
+  html += '</header>';
+  if(t.capital){
+    html += '<div class="capital-block rv" style="--d:80ms"><div class="label">Capital</div>'+
+            '<div class="capital-value">'+esc(t.capital)+'</div></div>';
+  }
+  html += '<div class="person-grid'+(single?' single':'')+'">';
+  html += personTile(t.lgg.role,t.lgg.name,"",t.lgg.pid,t.lgg.isNew,t.note, t.capital?160:80);
+  if(t.cm) html += personTile("Chief Minister",t.cm.name,t.cm.party,t.cm.pid,t.cm.isNew,"",240);
+  html += '</div>';
+  html += '<div class="stat-grid">';
+  html += statTile(t.rs,"Rajya Sabha","",single?240:320);
+  html += statTile(t.ls,"Lok Sabha","",single?300:380);
+  html += statTile(t.vs==="none"?"–":t.vs,"Vidhan Sabha",t.vs==="none"?"No Legislative Assembly":"",single?360:440);
+  html += '</div>';
+  html += '</article></div></section>';
+  return html;
+}
+
+/* =========================================================
+   MOUNT
+   ========================================================= */
+document.getElementById("stateScenes").innerHTML = STATES.map(stateScene).join("");
+document.getElementById("utScenes").innerHTML = UTS.map(utScene).join("");
+
+/* bicameral */
+(function(){
+  const rows = BICAMERAL.map(function(b){
+    return '<div class="glass leg-row rv" style="--d:'+((b.no-1)*60)+'ms">'+
+      '<div class="leg-top"><span class="leg-num">'+b.no+'</span><span class="leg-name">'+esc(b.state)+'</span></div>'+
+      '<div class="leg-line"><strong>First House</strong>Legislative Assembly (Vidhan Sabha)</div>'+
+      '<div class="leg-line"><strong>Second House</strong>Legislative Council (Vidhan Parishad)</div>'+
+      '<div class="leg-seats">Council seats: '+b.seats+'</div>'+
+      '</div>';
+  }).join("");
+  document.getElementById("legRows").innerHTML = rows;
+
+  let t = '<caption>Six states with a Legislative Council</caption><thead><tr><th scope="col">S. No.</th><th scope="col">State</th><th scope="col">First House</th><th scope="col">Second House</th><th scope="col">Council Seats</th></tr></thead><tbody>';
+  BICAMERAL.forEach(function(b){
+    t += '<tr><td>'+b.no+'</td><td>'+esc(b.state)+'</td><td>Legislative Assembly (Vidhan Sabha)</td><td>Legislative Council (Vidhan Parishad)</td><td>'+b.seats+'</td></tr>';
+  });
+  t += '</tbody>';
+  document.getElementById("legTable").innerHTML = t;
+})();
+
+/* facts */
+document.getElementById("factList").innerHTML = FACTS.map(function(f,i){
+  return '<div class="glass fact rv" style="--d:'+(i*60)+'ms"><span class="fact-num">'+String(i+1).padStart(2,"0")+'</span><p class="fact-text">'+esc(f)+'</p></div>';
+}).join("");
+
+/* index sheet */
+(function(){
+  const st = STATES.map(function(s){
+    return '<a class="sheet-item" href="#state-'+s.id+'" data-close="1"><span class="sn">'+String(s.no).padStart(2,"0")+'</span><span>'+esc(s.name)+'</span></a>';
+  }).join("");
+  const ut = UTS.map(function(u){
+    return '<a class="sheet-item" href="#ut-'+u.id+'" data-close="1"><span class="sn">'+String(u.no).padStart(2,"0")+'</span><span>'+esc(u.name)+'</span></a>';
+  }).join("");
+  document.getElementById("sheetStates").innerHTML = st;
+  document.getElementById("sheetUts").innerHTML = ut;
+})();
+
+/* =========================================================
+   INDEX SHEET
+   ========================================================= */
+(function(){
+  const sheet = document.getElementById("indexSheet");
+  const backdrop = document.getElementById("sheetBackdrop");
+  const btn = document.getElementById("indexBtn");
+  const closeBtn = document.getElementById("sheetClose");
+  let lastFocus = null;
+
+  function open(){
+    lastFocus = document.activeElement;
+    sheet.classList.add("open");
+    backdrop.classList.add("open");
+    btn.setAttribute("aria-expanded","true");
+    closeBtn.focus({preventScroll:true});
+  }
+  function close(){
+    sheet.classList.remove("open");
+    backdrop.classList.remove("open");
+    btn.setAttribute("aria-expanded","false");
+    if(lastFocus && lastFocus.focus) lastFocus.focus({preventScroll:true});
+  }
+  btn.addEventListener("click", function(){
+    if(sheet.classList.contains("open")) close(); else open();
+  });
+  closeBtn.addEventListener("click", close);
+  backdrop.addEventListener("click", close);
+  sheet.addEventListener("click", function(e){
+    const a = e.target.closest("[data-close]");
+    if(a) close();
+  });
+  document.addEventListener("keydown", function(e){
+    if(e.key === "Escape" && sheet.classList.contains("open")) close();
+  });
+})();
+
+/* =========================================================
+   SCROLL UI — parallax, progress line, top bar, dock, focus
+   Positions are measured once and cached; one passive rAF
+   listener does all reads from cache (no layout thrash).
+   ========================================================= */
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+const shapes = Array.prototype.slice.call(document.querySelectorAll(".shape"));
+const progressFill = document.getElementById("progressFill");
+const dockItems = Array.prototype.slice.call(document.querySelectorAll(".dock-item"));
+const tbSection = document.getElementById("tbSection");
+const tbCount = document.getElementById("tbCount");
+
+let anchors = [];
+let sectionSpans = [];
+let lastLabel = "";
+let focusedScene = null;
+let ticking = false;
+
+function measure(){
+  anchors = Array.prototype.map.call(document.querySelectorAll(".scene, .section-intro"), function(el){
+    const r = el.getBoundingClientRect();
+    const top = r.height ? r.top + (window.scrollY || window.pageYOffset) : 0;
+    return {
+      el: el,
+      top: top,
+      label: el.dataset.tb || "",
+      idx: el.dataset.idx ? parseInt(el.dataset.idx,10) : 0,
+      total: el.dataset.total ? parseInt(el.dataset.total,10) : 0,
+      isScene: el.classList.contains("scene")
+    };
+  });
+  sectionSpans = ["states","territories","legislatures","facts","quiz"].map(function(id){
+    const el = document.getElementById(id);
+    if(!el) return null;
+    const r = el.getBoundingClientRect();
+    return {id:id, top:r.top + (window.scrollY || window.pageYOffset), bottom:r.bottom + (window.scrollY || window.pageYOffset)};
+  }).filter(Boolean);
+}
+
+function setTopbar(label, idx, total){
+  const count = (idx && total) ? (String(idx).padStart(2,"0") + " / " + String(total).padStart(2,"0")) : "";
+  const key = label + "|" + count;
+  if(key === lastLabel) return;
+  lastLabel = key;
+  tbSection.textContent = label;
+  tbCount.textContent = count;
+}
+
+function updateScrollUI(){
+  ticking = false;
+  const y = window.scrollY || window.pageYOffset;
+  const vh = window.innerHeight;
+  const docH = document.documentElement.scrollHeight - vh;
+  const p = docH > 0 ? Math.min(1, Math.max(0, y / docH)) : 0;
+  progressFill.style.width = (p*100).toFixed(2) + "%";
+
+  if(!reduceMotion.matches){
+    for(let i=0;i<shapes.length;i++){
+      const sp = parseFloat(shapes[i].dataset.speed || "0.1");
+      shapes[i].style.transform = "translate3d(0," + (y*sp).toFixed(2) + "px,0)";
+    }
+  }
+
+  /* top bar label + focused scene */
+  const center = y + vh*0.5;
+  let current = null;
+  for(let i=0;i<anchors.length;i++){
+    if(anchors[i].top <= center) current = anchors[i];
+    else break;
+  }
+  if(current) setTopbar(current.label, current.idx, current.total);
+
+  const focus = (current && current.isScene) ? current.el : null;
+  if(focus !== focusedScene){
+    focusedScene = focus;
+    document.querySelectorAll(".scene").forEach(function(s){
+      s.classList.toggle("dim", s !== focus && s.classList.contains("in"));
+    });
+  }
+
+  /* dock active item */
+  let active = "";
+  for(let i=0;i<sectionSpans.length;i++){
+    const sp = sectionSpans[i];
+    if(sp.top <= center && sp.bottom > center) active = sp.id;
+  }
+  if(active === "facts") active = "";
+  dockItems.forEach(function(item){
+    item.setAttribute("aria-current", item.dataset.dock === active ? "true" : "false");
+  });
+}
+
+function requestFrame(){
+  if(!ticking){ ticking = true; window.requestAnimationFrame(updateScrollUI); }
+}
+
+window.addEventListener("scroll", requestFrame, {passive:true});
+window.addEventListener("resize", function(){ measure(); requestFrame(); }, {passive:true});
+window.addEventListener("orientationchange", function(){ setTimeout(function(){ measure(); requestFrame(); }, 250); });
+window.addEventListener("load", function(){ measure(); requestFrame(); });
+
+/* =========================================================
+   ENTRANCE — scenes use a 0.35 threshold, tall content
+   blocks use a rootMargin band so they always trigger.
+   ========================================================= */
+const enterObserver = new IntersectionObserver(function(entries){
+  entries.forEach(function(en){
+    if(!en.isIntersecting) return;
+    en.target.classList.add("in");
+    document.body.classList.add("ready");
+    enterObserver.unobserve(en.target);
+  });
+}, {threshold:0.35});
+
+const blockObserver = new IntersectionObserver(function(entries){
+  entries.forEach(function(en){
+    if(!en.isIntersecting) return;
+    en.target.classList.add("in");
+    blockObserver.unobserve(en.target);
+  });
+}, {threshold:0, rootMargin:"-15% 0px -15% 0px"});
+
+document.querySelectorAll(".scene").forEach(function(s){ enterObserver.observe(s); });
+document.querySelectorAll("#legislatures, #facts, #quiz, .closing-note").forEach(function(b){ blockObserver.observe(b); });
+
+measure();
+requestFrame();
+
+/* =========================================================
+   POINTER TILT (fine pointers only)
+   ========================================================= */
+(function(){
+  if(!window.matchMedia("(pointer: fine)").matches) return;
+  const cards = Array.prototype.slice.call(document.querySelectorAll("[data-tilt]"));
+  cards.forEach(function(card){
+    card.addEventListener("pointermove", function(e){
+      if(reduceMotion.matches) return;
+      const r = card.getBoundingClientRect();
+      const px = (e.clientX - r.left) / r.width - 0.5;
+      const py = (e.clientY - r.top) / r.height - 0.5;
+      card.style.transform = "rotateY(" + (px*4).toFixed(2) + "deg) rotateX(" + (-py*4).toFixed(2) + "deg)";
+    });
+    card.addEventListener("pointerleave", function(){
+      card.style.transform = "";
+    });
+  });
+})();
+
+/* =========================================================
+   QUIZ
+   ========================================================= */
+(function(){
+  const root = document.getElementById("quizRoot");
+  const TOTAL = QUIZ.length;
+  const CATS = ["States","Capitals and Geography","Legislature","Union Territories"];
+  const BEST_KEY = "gcm2026-best-score";
+  let state = null;
+  let best = null;
+
+  try{
+    const stored = window.localStorage.getItem(BEST_KEY);
+    if(stored !== null && !isNaN(parseInt(stored,10))) best = parseInt(stored,10);
+  }catch(e){ best = null; }
+
+  function shuffle(arr){
+    const a = arr.slice();
+    for(let i=a.length-1;i>0;i--){
+      const j = Math.floor(Math.random()*(i+1));
+      const tmp=a[i]; a[i]=a[j]; a[j]=tmp;
+    }
+    return a;
+  }
+
+  const CHECK_SVG = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg>';
+  const CROSS_SVG = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>';
+
+  function bestLine(){
+    if(best === null) return "";
+    return '<div class="best-line">Best score: '+best+' / '+TOTAL+'</div>';
+  }
+
+  function renderStart(){
+    root.innerHTML = '<div class="glass quiz-shell quiz-pad">'+
+      '<h3 class="quiz-title">Knowledge Check</h3>'+
+      '<p class="quiz-lead">25 questions. One correct answer each. Instant feedback.</p>'+
+      '<div class="quiz-meta">Categories: States, Capitals and Geography, Legislature, Union Territories</div>'+
+      '<div class="result-actions" style="margin-top:18px">'+
+        '<button class="btn btn-primary" id="startQuiz" type="button">Start Test</button>'+
+      '</div>'+
+      bestLine()+
+    '</div>';
+    document.getElementById("startQuiz").addEventListener("click", function(){
+      state = {i:0, answers:new Array(TOTAL).fill(null), orders:{}, locked:false, pool:null};
+      renderQuestion();
+    });
+  }
+
+  function currentIndex(){
+    return state.pool ? state.pool[state.i] : state.i;
+  }
+
+  function scoreSoFar(){
+    let s=0;
+    for(let i=0;i<TOTAL;i++){
+      const a = state.answers[i];
+      if(a !== null && a.correct) s++;
+    }
+    return s;
+  }
+
+  function answeredCount(){
+    let n=0;
+    for(let i=0;i<TOTAL;i++){ if(state.answers[i] !== null) n++; }
+    return n;
+  }
+
+  function segMarkup(){
+    let html = '<div class="seg-bar" role="img" aria-label="Progress: question '+(state.i+1)+' of '+(state.pool?state.pool.length:TOTAL)+'">';
+    const len = state.pool ? state.pool.length : TOTAL;
+    for(let i=0;i<len;i++){
+      const qi = state.pool ? state.pool[i] : i;
+      const a = state.answers[qi];
+      let cls = "seg";
+      if(a !== null) cls += a.correct ? " ok" : " no";
+      else if(i === state.i) cls += " current";
+      html += '<span class="'+cls+'"></span>';
+    }
+    html += '</div>';
+    return html;
+  }
+
+  function renderQuestion(){
+    const qi = currentIndex();
+    const item = QUIZ[qi];
+    const len = state.pool ? state.pool.length : TOTAL;
+    const answered = answeredCount();
+    const opts = state.orders[qi] || (state.orders[qi] = shuffle(item.options));
+
+    let html = '<div class="glass quiz-shell quiz-pad">';
+    html += '<div class="q-head"><span class="q-count">Question '+(state.i+1)+' of '+len+'</span>'+
+            '<span class="q-score">Score '+scoreSoFar()+'</span></div>';
+    html += segMarkup();
+    html += '<div class="completion"><div class="completion-fill" style="width:'+Math.round(answered/TOTAL*100)+'%"></div></div>';
+    html += '<p class="q-text">'+esc(item.q)+'</p>';
+    html += '<div class="opt-list" id="optList">';
+    opts.forEach(function(text,idx){
+      const letter = String.fromCharCode(65+idx);
+      html += '<button class="opt" type="button" data-text="'+esc(text)+'">'+
+                '<span class="letter">'+letter+'</span>'+
+                '<span class="opt-text">'+esc(text)+'</span>'+
+                '<span class="opt-mark"></span>'+
+              '</button>';
+    });
+    html += '</div>';
+    html += '<div id="feedback" aria-live="polite"></div>';
+    html += '<div class="q-actions" id="qActions"></div>';
+    html += '</div>';
+    root.innerHTML = html;
+
+    const optButtons = Array.prototype.slice.call(root.querySelectorAll(".opt"));
+    optButtons.forEach(function(btn){
+      btn.addEventListener("click", function(){ answer(btn, item, qi, len, optButtons); });
+    });
+  }
+
+  function answer(btn, item, qi, len, optButtons){
+    if(state.answers[qi] !== null) return;
+    const chosen = btn.dataset.text;
+    const correct = chosen === item.answer;
+    state.answers[qi] = {chosen:chosen, correct:correct};
+
+    optButtons.forEach(function(b){
+      const t = b.dataset.text;
+      b.disabled = true;
+      const mark = b.querySelector(".opt-mark");
+      if(t === item.answer){
+        b.classList.add("correct");
+        mark.innerHTML = CHECK_SVG + "<span>Correct</span>";
+      }else if(t === chosen){
+        b.classList.add("wrong");
+        mark.innerHTML = CROSS_SVG + "<span>Incorrect</span>";
+      }else{
+        b.classList.add("dimmed");
+      }
+    });
+
+    const fb = document.getElementById("feedback");
+    fb.innerHTML = '<div class="explain"><strong>'+(correct?"Correct":"Incorrect")+'</strong>'+esc(item.exp)+'</div>';
+
+    const actions = document.getElementById("qActions");
+    const isLast = state.i === (state.pool ? state.pool.length : TOTAL) - 1;
+    actions.innerHTML = '<button class="btn btn-primary" type="button" id="nextBtn">'+(isLast?"See Result":"Next")+'</button>';
+    document.getElementById("nextBtn").addEventListener("click", function(){
+      if(isLast){ renderResult(); }
+      else { state.i++; renderQuestion(); window.scrollTo({top:root.getBoundingClientRect().top + window.scrollY - 90, behavior:"smooth"}); }
+    });
+    const nextBtn = document.getElementById("nextBtn");
+    nextBtn.focus({preventScroll:true});
+    const nbRect = nextBtn.getBoundingClientRect();
+    const limit = window.innerHeight - 104;
+    if(nbRect.bottom > limit){
+      window.scrollBy({top: nbRect.bottom - limit, behavior:"smooth"});
+    }
+
+    /* refresh header + progress without rebuilding options */
+    const head = root.querySelector(".q-score");
+    if(head) head.textContent = "Score " + scoreSoFar();
+    const segs = root.querySelectorAll(".seg");
+    if(segs[state.i]) segs[state.i].className = "seg " + (correct?"ok":"no");
+    const fill = root.querySelector(".completion-fill");
+    if(fill) fill.style.width = Math.round(answeredCount()/TOTAL*100) + "%";
+  }
+
+  function renderResult(){
+    let score = 0, perCat = {};
+    CATS.forEach(function(c){ perCat[c] = {ok:0,total:0}; });
+    QUIZ.forEach(function(item,i){
+      const a = state.answers[i];
+      perCat[item.cat].total++;
+      if(a && a.correct){ score++; perCat[item.cat].ok++; }
+    });
+    const pct = Math.round(score/TOTAL*100);
+    if(best === null || score > best){
+      best = score;
+      try{ window.localStorage.setItem(BEST_KEY, String(best)); }catch(e){}
+    }
+    let msg = "Needs more revision";
+    if(pct >= 90) msg = "Outstanding";
+    else if(pct >= 75) msg = "Great work";
+    else if(pct >= 50) msg = "Good, keep revising";
+
+    const R = 52, C = 2*Math.PI*R;
+    const dash = (C * (pct/100)).toFixed(2);
+    const ring = '<svg viewBox="0 0 120 120" role="img" aria-label="Score '+score+' out of '+TOTAL+', '+pct+' percent">'+
+      '<circle class="ring-track" cx="60" cy="60" r="'+R+'" fill="none" stroke-width="12"/>'+
+      '<circle class="ring-fill" cx="60" cy="60" r="'+R+'" fill="none" stroke-width="12" stroke-linecap="round" '+
+      'stroke-dasharray="'+C.toFixed(2)+'" stroke-dashoffset="'+(C-parseFloat(dash)).toFixed(2)+'" transform="rotate(-90 60 60)"/>'+
+      '<text x="60" y="66" text-anchor="middle" font-size="20" font-weight="700" fill="#F4F6FA">'+pct+'%</text>'+
+      '</svg>';
+
+    let html = '<div class="glass quiz-shell quiz-pad">';
+    html += '<div class="result-head"><div class="ring">'+ring+'</div><div>'+
+            '<div class="result-score">'+score+' / '+TOTAL+'</div>'+
+            '<div class="result-pct">'+pct+'% correct</div>'+
+            '<div class="result-msg">'+msg+'</div>'+
+            '</div></div>';
+    html += '<div class="label" style="margin-bottom:10px">Category performance</div><div class="cat-block">';
+    CATS.forEach(function(c){
+      const d = perCat[c];
+      const p = d.total ? Math.round(d.ok/d.total*100) : 0;
+      html += '<div class="cat-row"><div class="cat-top"><span class="cat-name">'+esc(c)+'</span><span class="cat-val">'+d.ok+' / '+d.total+'</span></div>'+
+              '<div class="bar"><div class="bar-fill" style="width:'+p+'%"></div></div></div>';
+    });
+    html += '</div>';
+
+    html += '<details class="review"><summary><span>Review answers</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div>';
+    QUIZ.forEach(function(item,i){
+      const a = state.answers[i];
+      const yours = a ? a.chosen : "Not answered";
+      const ok = a && a.correct;
+      html += '<div class="review-item">'+
+        '<div class="review-q">'+(i+1)+'. '+esc(item.q)+'</div>'+
+        '<div class="review-line '+(ok?"is-good":"is-bad")+'">Your answer: '+esc(yours)+'</div>'+
+        '<div class="review-line '+(ok?"":"is-good")+'">Correct answer: '+esc(item.answer)+'</div>'+
+        '</div>';
+    });
+    html += '</div></details>';
+
+    const wrongIdx = [];
+    QUIZ.forEach(function(item,i){ const a = state.answers[i]; if(!a || !a.correct) wrongIdx.push(i); });
+    html += '<div class="result-actions">'+
+      '<button class="btn btn-primary" type="button" id="retakeAll">Retake Test</button>'+
+      '<button class="btn" type="button" id="retakeWrong"'+(wrongIdx.length?"":" disabled aria-disabled=true style=opacity:.55")+'>Retake Incorrect Questions'+(wrongIdx.length?' ('+wrongIdx.length+')':'')+'</button>'+
+      '</div>';
+    html += bestLine();
+    html += '</div>';
+    root.innerHTML = html;
+
+    document.getElementById("retakeAll").addEventListener("click", function(){
+      state = {i:0, answers:new Array(TOTAL).fill(null), orders:{}, locked:false, pool:null};
+      renderQuestion();
+    });
+    const rw = document.getElementById("retakeWrong");
+    if(rw && wrongIdx.length){
+      rw.addEventListener("click", function(){
+        const answers = new Array(TOTAL).fill(null);
+        state = {i:0, answers:answers, orders:{}, locked:false, pool:wrongIdx.slice()};
+        renderQuestion();
+      });
+    }
+  }
+
+  renderStart();
+})();
+</script>
+</body>
+</html>
